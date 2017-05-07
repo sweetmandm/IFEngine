@@ -1,0 +1,38 @@
+// First attempt
+
+The game begins by asking a series of questions. Remeniscient of Blade Runner.
+
+Some of them seem benign. Some of them seem moral.
+
+The questions define your personality for this playthrough.
+
+QUESTION:
+Are you afraid to exit(0)?
+1) True
+    Fear +5
+2) False
+    Fear -5
+
+QUESTION:
+In a forest, you come across a coyote caught in a trap.
+
+MESSAGE: GameEntry
+    text:
+    <allocate memory>
+    accept:
+    NEXT INSTRUCTION
+    next: intro_1
+
+MESSAGE: intro_1
+    text:
+    <initialize registers>
+    accept:
+    NEXT INSTRUCTION
+    next: intro_2
+
+MESSAGE: intro_2
+    text:
+    _main:
+    accept:
+    NEXT INSTRUCTION
+    next: load(FirstLesson)

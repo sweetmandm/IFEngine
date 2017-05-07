@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C401E8DC65796F6123F44AD4C5E709B085CA6F02",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C401E8DC65796F6123F44AD4C5E709B085CA6F02" : 0,
+    "A709708AACB923B21C688EC636990C44B617512A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "51BD9CF5-CFE9-48E6-8C74-6C1A96996C94",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C401E8DC65796F6123F44AD4C5E709B085CA6F02" : "Ramshackle\/",
+    "A709708AACB923B21C688EC636990C44B617512A" : "..\/smashingboxes\/storefront"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Ramshackle",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Ramshackle.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:smashingboxes\/storefront.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A709708AACB923B21C688EC636990C44B617512A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:sweetmandm\/Ramshackle.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C401E8DC65796F6123F44AD4C5E709B085CA6F02"
+    }
+  ]
+}

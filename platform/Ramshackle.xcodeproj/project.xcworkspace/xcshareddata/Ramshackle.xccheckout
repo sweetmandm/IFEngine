@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6ED17993-1730-4B83-B8BE-985A9E1FE038</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ramshackle</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C401E8DC65796F6123F44AD4C5E709B085CA6F02</key>
+		<string>github.com:sweetmandm/Ramshackle.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ramshackle.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C401E8DC65796F6123F44AD4C5E709B085CA6F02</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:sweetmandm/Ramshackle.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C401E8DC65796F6123F44AD4C5E709B085CA6F02</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C401E8DC65796F6123F44AD4C5E709B085CA6F02</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ramshackle</string>
+		</dict>
+	</array>
+</dict>
+</plist>

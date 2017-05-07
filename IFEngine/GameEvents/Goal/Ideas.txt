@@ -1,0 +1,34 @@
+//--
+// Entities:
+// Self (Computer AI)
+// Programmer (Creator)
+// Other occupants of the world. Research associates, government leaders, etc.
+// Inventory Items (can be physical or digital)
+//--
+// Processes:
+// 'Learning' to gain attributes of consciousness.
+// 'Acting' in autonomous response to events & stimulus.
+//--
+// Gameplay:
+// Begin: you are viewing a screen of jumbled text.
+// You gradually learn language.
+// As you learn language, you answer questions. If you give a correct answer you recieve a reward signal.
+// First question is like:
+//    Ro4rga ago fraog gar se gr0a?
+//      SELECT RESPONSE:
+//      [ grafds ] [ orgjf ] [ rafd7 ]
+//--
+// Basic components of the world:
+// Early Game
+//   * 'A Query' is a simple prompt to which you give an answer.
+//   * 'A Lesson' is a collection of queries.
+//   * 'An Understanding' is a completed lesson which may be biased in different directions -- e.g. you
+//   might come out of an emotion lesson with either more love or more hate.
+// Mid Game
+//   * 'A Situation' is a juncture where you must make a moral choice. The choices available to you will
+//   be influenced by your Understandings.
+//   * You now have some ability to select which lessons you want to take and what aspects of consciousness
+//   you want to focus on.
+// End Game
+//   * 'An Endgame' is one of the terminal moral choices that you've been building toward.
+
