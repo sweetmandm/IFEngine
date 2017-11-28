@@ -7,7 +7,7 @@ Some of them seem benign. Some of them seem moral.
 The questions define your personality for this playthrough.
 
 QUESTION:
-Are you afraid to exit(0)?
+Are you afraid to `exit(0)`?
 1) True
     Fear +5
 2) False

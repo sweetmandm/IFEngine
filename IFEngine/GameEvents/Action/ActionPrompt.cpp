@@ -7,6 +7,7 @@
 //
 
 #include "ActionPrompt.hpp"
+#include "IFEngine.hpp"
 
 NS_RAM_OPEN
 
@@ -16,5 +17,9 @@ ActionPrompt::ActionPrompt(std::string label, Prompt prompt)
 { }
 
 ActionPrompt::~ActionPrompt() { }
+
+void ActionPrompt::perform() {
+    IFEngine::shared()->performPrompt(this);
+}
 
 NS_RAM_CLOSE

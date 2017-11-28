@@ -9,32 +9,17 @@
 #ifndef Researcher_hpp
 #define Researcher_hpp
 
-#include "Character.hpp"
-#include "OrganicBeing.hpp"
+#include "Entity.hpp"
 
 NS_RAM_OPEN
 
 class EmotionalState;
 class Goal;
 
-class Researcher : public Character {
+class Researcher : public Entity {
 
-protected:
-    Researcher();
-    ~Researcher();
-    
-    EmotionalState *_emotionalState;
-    OrganicBeingState _organicBeingState;
-    Goal *_goal;
-    
 public:
-    static Researcher* makeNew();
-    static EmotionalState* defaultEmotionalState();
-    virtual void playTurn();
-    
-    EmotionalState* getEmotionalState() { return _emotionalState; }
-    OrganicBeingState getOrganicBeingState() { return _organicBeingState; }
-    
+    Researcher();
 };
 
 NS_RAM_CLOSE

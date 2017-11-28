@@ -12,19 +12,23 @@
 
 NS_RAM_OPEN
 
-ResearchOffice::ResearchOffice() { }
-
-ResearchOffice::~ResearchOffice() { }
-
-ResearchOffice* ResearchOffice::makeNew()
+ResearchOffice::ResearchOffice()
+: Location({
+    "Research Office",
+    "There is a chill."
+})
 {
-    auto office = new ResearchOffice();
-    return office;
-}
-
-void ResearchOffice::playTurn()
-{
-    
+    /* IDEA:
+     The Location gets a bunch of randomly-generated Components.
+     
+     It's also given a randomly-generated name, based on a randomly-selected Type.
+     (For example, "University Computer Science Hall", would markov from a bunch of names
+     like "Stewmann Building", "Partner Building I", etc.
+     
+     Its description is generated off of its components. The description is the
+     player's INTERPRETATION of those components. For example, if you have a
+     'Sensory' component, you might get "The room feels chilly."
+     */
 }
 
 NS_RAM_CLOSE

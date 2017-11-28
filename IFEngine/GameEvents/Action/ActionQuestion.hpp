@@ -67,6 +67,7 @@ public:
     
     Question getQuestion() { return _question; }
     
+    virtual void perform();
     void selectAnswer(Answer answer);
 };
 

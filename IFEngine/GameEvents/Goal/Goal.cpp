@@ -7,7 +7,6 @@
 //
 
 #include "Goal.hpp"
-#include "Character.hpp"
 
 NS_RAM_OPEN
 

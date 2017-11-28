@@ -28,12 +28,16 @@ PowerSupply* PowerSupply::makePowerSupply(PowerSource *powerSource, int startPow
     return supply;
 }
 
+void PowerSupply::connectDevice(Powerable *powerable) {
+    _connectedDevices.push_back(powerable);
+}
+
+void PowerSupply::disconnectDevice(Powerable *powerable) {
+    _connectedDevices.erase(std::remove(_connectedDevices.begin(), _connectedDevices.end(), powerable));
+}
+
 int PowerSupply::getRemainingPower() { return _powerUnit->getCount(); };
 int PowerSupply::getPowerReplenishRate() { return _powerSource->getReplenishRate(); };
-
-void PowerSupply::playTurn() {
-    chargeFromSource();
-}
 
 void PowerSupply::chargeFromSource() {
     if (_powerSource != nullptr) {

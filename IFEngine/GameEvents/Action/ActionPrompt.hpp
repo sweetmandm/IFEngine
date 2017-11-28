@@ -25,6 +25,7 @@ public:
     ActionPrompt(std::string label, Prompt prompt);
     ~ActionPrompt();
     Prompt getPrompt() { return _prompt; };
+    virtual void perform();
 };
 
 NS_RAM_CLOSE

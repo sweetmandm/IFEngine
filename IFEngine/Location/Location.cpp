@@ -10,11 +10,9 @@
 
 NS_RAM_OPEN
 
-Location::Location() { }
-Location::~Location() { }
-
-void Location::playTurn() {
-    RAM_LOG("This location has nothing to do.");
-}
+Location::Location(std::string name, std::string description)
+: _name(name)
+, _description(description)
+{ }
 
 NS_RAM_CLOSE

@@ -69,7 +69,6 @@
 		837BB0AD1EBFC8C800C372A9 /* PowerSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837BB0541EBFC8C800C372A9 /* PowerSource.cpp */; };
 		837BB0AE1EBFC8C800C372A9 /* PowerSupply.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837BB0561EBFC8C800C372A9 /* PowerSupply.cpp */; };
 		837BB0AF1EBFC8C800C372A9 /* PowerUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837BB0581EBFC8C800C372A9 /* PowerUnit.cpp */; };
-		837BB0B01EBFC8C800C372A9 /* Subsytem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837BB05B1EBFC8C800C372A9 /* Subsytem.cpp */; };
 		837BB0BF1EBFC8C800C372A9 /* UIComponentMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837BB07D1EBFC8C800C372A9 /* UIComponentMessage.cpp */; };
 		837BB0C01EBFC8C800C372A9 /* UIComponentQuestion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837BB07F1EBFC8C800C372A9 /* UIComponentQuestion.cpp */; };
 		837BB0C11EBFC8C800C372A9 /* UIController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837BB0811EBFC8C800C372A9 /* UIController.cpp */; };
@@ -85,6 +84,15 @@
 		837BB0EF1EBFD7B400C372A9 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 837BB0E21EBFD7B400C372A9 /* UIView+Helper.m */; };
 		837BB0F01EBFD7B400C372A9 /* FullTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837BB0E51EBFD7B400C372A9 /* FullTextView.m */; };
 		837BB0FE1EBFD83500C372A9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837BB0FA1EBFD83500C372A9 /* main.cpp */; };
+		8385796D1FBD438A00555CE5 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8385796B1FBD438A00555CE5 /* Entity.cpp */; };
+		838579701FBD439500555CE5 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8385796E1FBD439500555CE5 /* Component.cpp */; };
+		83ADC0811FC8418C00157E14 /* ConsciousBeing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ADC0801FC8418C00157E14 /* ConsciousBeing.cpp */; };
+		83ADC0831FC8426D00157E14 /* Powerable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ADC0821FC8426D00157E14 /* Powerable.cpp */; };
+		83ADC08B1FCB91DE00157E14 /* Relationship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ADC0891FCB91DE00157E14 /* Relationship.cpp */; };
+		83ADC08E1FCBB08500157E14 /* Relational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ADC08C1FCBB08500157E14 /* Relational.cpp */; };
+		83ADC0911FCC465800157E14 /* ObjectMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ADC08F1FCC465800157E14 /* ObjectMap.cpp */; };
+		83ADC0941FCC48F100157E14 /* WorldMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ADC0921FCC48F100157E14 /* WorldMap.cpp */; };
+		83ADC0961FCD88E600157E14 /* RamBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ADC0951FCD88E600157E14 /* RamBase.cpp */; };
 		A134AC0D99FD598F56CAC181 /* libPods-Ramshackle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC925988E75236FBC4CCD460 /* libPods-Ramshackle-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -133,7 +141,6 @@
 		832510C51EBFE8F700AA1A2E /* GameState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
 		832510C81EBFE9E100AA1A2E /* NotificationSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NotificationSystem.cpp; sourceTree = "<group>"; };
 		832510C91EBFE9E100AA1A2E /* NotificationSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NotificationSystem.hpp; sourceTree = "<group>"; };
-		832510CE1EBFEA0600AA1A2E /* Character.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Character.hpp; sourceTree = "<group>"; };
 		832510D01EBFEA0600AA1A2E /* Anger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Anger.cpp; sourceTree = "<group>"; };
 		832510D11EBFEA0600AA1A2E /* Anger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Anger.hpp; sourceTree = "<group>"; };
 		832510D21EBFEA0600AA1A2E /* Emotion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Emotion.cpp; sourceTree = "<group>"; };
@@ -146,7 +153,7 @@
 		832510D91EBFEA0600AA1A2E /* Happiness.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Happiness.hpp; sourceTree = "<group>"; };
 		832510DA1EBFEA0600AA1A2E /* Motivation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Motivation.cpp; sourceTree = "<group>"; };
 		832510DB1EBFEA0600AA1A2E /* Motivation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Motivation.hpp; sourceTree = "<group>"; };
-		832510DC1EBFEA0600AA1A2E /* OrganicBeing.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OrganicBeing.hpp; sourceTree = "<group>"; };
+		832510DC1EBFEA0600AA1A2E /* ConsciousBeing.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConsciousBeing.hpp; sourceTree = "<group>"; };
 		832510DD1EBFEA0600AA1A2E /* Powerable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Powerable.hpp; sourceTree = "<group>"; };
 		832510DE1EBFEA0600AA1A2E /* Researcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Researcher.cpp; sourceTree = "<group>"; };
 		832510DF1EBFEA0600AA1A2E /* Researcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Researcher.hpp; sourceTree = "<group>"; };
@@ -163,8 +170,6 @@
 		832510F61EBFEB4C00AA1A2E /* ActionRegistry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ActionRegistry.hpp; sourceTree = "<group>"; };
 		832510F71EBFEB4C00AA1A2E /* NextAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NextAction.cpp; sourceTree = "<group>"; };
 		832510F81EBFEB4C00AA1A2E /* NextAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NextAction.hpp; sourceTree = "<group>"; };
-		832510F91EBFEB4C00AA1A2E /* NextActionFromLabel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NextActionFromLabel.hpp; sourceTree = "<group>"; };
-		832510FA1EBFEB4C00AA1A2E /* NextActionFromLambda.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NextActionFromLambda.hpp; sourceTree = "<group>"; };
 		832510FB1EBFEB4C00AA1A2E /* NextActionNone.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NextActionNone.hpp; sourceTree = "<group>"; };
 		832510FC1EBFEB4C00AA1A2E /* FirstLesson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirstLesson.cpp; sourceTree = "<group>"; };
 		832510FD1EBFEB4C00AA1A2E /* FirstLesson.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FirstLesson.hpp; sourceTree = "<group>"; };
@@ -222,8 +227,6 @@
 		837BB0571EBFC8C800C372A9 /* PowerSupply.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PowerSupply.hpp; sourceTree = "<group>"; };
 		837BB0581EBFC8C800C372A9 /* PowerUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PowerUnit.cpp; sourceTree = "<group>"; };
 		837BB0591EBFC8C800C372A9 /* PowerUnit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PowerUnit.hpp; sourceTree = "<group>"; };
-		837BB05B1EBFC8C800C372A9 /* Subsytem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Subsytem.cpp; sourceTree = "<group>"; };
-		837BB05C1EBFC8C800C372A9 /* Subsytem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Subsytem.hpp; sourceTree = "<group>"; };
 		837BB07A1EBFC8C800C372A9 /* UIComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UIComponent.hpp; sourceTree = "<group>"; };
 		837BB07C1EBFC8C800C372A9 /* UIComponentMainMenu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UIComponentMainMenu.hpp; sourceTree = "<group>"; };
 		837BB07D1EBFC8C800C372A9 /* UIComponentMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIComponentMessage.cpp; sourceTree = "<group>"; };
@@ -258,6 +261,21 @@
 		837BB0E41EBFD7B400C372A9 /* FullTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTextView.h; sourceTree = "<group>"; };
 		837BB0E51EBFD7B400C372A9 /* FullTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTextView.m; sourceTree = "<group>"; };
 		837BB0FA1EBFD83500C372A9 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8385796B1FBD438A00555CE5 /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		8385796C1FBD438A00555CE5 /* Entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
+		8385796E1FBD439500555CE5 /* Component.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		8385796F1FBD439500555CE5 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		83ADC0801FC8418C00157E14 /* ConsciousBeing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConsciousBeing.cpp; sourceTree = "<group>"; };
+		83ADC0821FC8426D00157E14 /* Powerable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Powerable.cpp; sourceTree = "<group>"; };
+		83ADC0891FCB91DE00157E14 /* Relationship.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Relationship.cpp; sourceTree = "<group>"; };
+		83ADC08A1FCB91DE00157E14 /* Relationship.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Relationship.hpp; sourceTree = "<group>"; };
+		83ADC08C1FCBB08500157E14 /* Relational.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Relational.cpp; sourceTree = "<group>"; };
+		83ADC08D1FCBB08500157E14 /* Relational.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Relational.hpp; sourceTree = "<group>"; };
+		83ADC08F1FCC465800157E14 /* ObjectMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectMap.cpp; sourceTree = "<group>"; };
+		83ADC0901FCC465800157E14 /* ObjectMap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ObjectMap.hpp; sourceTree = "<group>"; };
+		83ADC0921FCC48F100157E14 /* WorldMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WorldMap.cpp; sourceTree = "<group>"; };
+		83ADC0931FCC48F100157E14 /* WorldMap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WorldMap.hpp; sourceTree = "<group>"; };
+		83ADC0951FCD88E600157E14 /* RamBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RamBase.cpp; sourceTree = "<group>"; };
 		A38D1D3F502D1AC9553878C1 /* Pods-Ramshackle-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramshackle-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ramshackle-iOS/Pods-Ramshackle-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DC925988E75236FBC4CCD460 /* libPods-Ramshackle-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ramshackle-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -462,9 +480,10 @@
 		832510CC1EBFEA0600AA1A2E /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				832510CE1EBFEA0600AA1A2E /* Character.hpp */,
 				832510CF1EBFEA0600AA1A2E /* Emotion */,
-				832510DC1EBFEA0600AA1A2E /* OrganicBeing.hpp */,
+				83ADC0801FC8418C00157E14 /* ConsciousBeing.cpp */,
+				832510DC1EBFEA0600AA1A2E /* ConsciousBeing.hpp */,
+				83ADC0821FC8426D00157E14 /* Powerable.cpp */,
 				832510DD1EBFEA0600AA1A2E /* Powerable.hpp */,
 				832510DE1EBFEA0600AA1A2E /* Researcher.cpp */,
 				832510DF1EBFEA0600AA1A2E /* Researcher.hpp */,
@@ -521,8 +540,6 @@
 				832510F61EBFEB4C00AA1A2E /* ActionRegistry.hpp */,
 				832510F71EBFEB4C00AA1A2E /* NextAction.cpp */,
 				832510F81EBFEB4C00AA1A2E /* NextAction.hpp */,
-				832510F91EBFEB4C00AA1A2E /* NextActionFromLabel.hpp */,
-				832510FA1EBFEB4C00AA1A2E /* NextActionFromLambda.hpp */,
 				832510FB1EBFEB4C00AA1A2E /* NextActionNone.hpp */,
 			);
 			path = Action;
@@ -626,13 +643,20 @@
 		837BAFF71EBFC8C700C372A9 /* IFEngine */ = {
 			isa = PBXGroup;
 			children = (
+				83ADC0951FCD88E600157E14 /* RamBase.cpp */,
 				837BB0C31EBFC91100C372A9 /* RamBase.h */,
 				837BB03D1EBFC8C700C372A9 /* IFEngine.cpp */,
 				837BB03E1EBFC8C700C372A9 /* IFEngine.hpp */,
+				83ADC08F1FCC465800157E14 /* ObjectMap.cpp */,
+				83ADC0901FCC465800157E14 /* ObjectMap.hpp */,
 				837BAFE81EBFC82A00C372A9 /* Platform */,
 				832510C31EBFE8F700AA1A2E /* GameState */,
+				838579691FBD437800555CE5 /* Component */,
+				8385796A1FBD437900555CE5 /* Entity */,
+				838579711FBDBDE000555CE5 /* Systems */,
 				832510EB1EBFEB4C00AA1A2E /* GameEvents */,
 				832510C71EBFE9E100AA1A2E /* NogificationSystem */,
+				83ADC0881FCB91CD00157E14 /* Relationship */,
 				837BB03F1EBFC8C700C372A9 /* Location */,
 				837BB0511EBFC8C800C372A9 /* Player */,
 				832510CB1EBFEA0600AA1A2E /* GamePiece */,
@@ -647,6 +671,8 @@
 		837BB03F1EBFC8C700C372A9 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				83ADC0921FCC48F100157E14 /* WorldMap.cpp */,
+				83ADC0931FCC48F100157E14 /* WorldMap.hpp */,
 				837BB0401EBFC8C700C372A9 /* Location.cpp */,
 				837BB0411EBFC8C700C372A9 /* Location.hpp */,
 				837BB0421EBFC8C700C372A9 /* ResearchOffice.cpp */,
@@ -666,18 +692,8 @@
 				837BB0571EBFC8C800C372A9 /* PowerSupply.hpp */,
 				837BB0581EBFC8C800C372A9 /* PowerUnit.cpp */,
 				837BB0591EBFC8C800C372A9 /* PowerUnit.hpp */,
-				837BB05A1EBFC8C800C372A9 /* Subsystems */,
 			);
 			path = Player;
-			sourceTree = "<group>";
-		};
-		837BB05A1EBFC8C800C372A9 /* Subsystems */ = {
-			isa = PBXGroup;
-			children = (
-				837BB05B1EBFC8C800C372A9 /* Subsytem.cpp */,
-				837BB05C1EBFC8C800C372A9 /* Subsytem.hpp */,
-			);
-			path = Subsystems;
 			sourceTree = "<group>";
 		};
 		837BB05F1EBFC8C800C372A9 /* UI */ = {
@@ -768,6 +784,42 @@
 			path = ../../EngineTests;
 			sourceTree = "<group>";
 		};
+		838579691FBD437800555CE5 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8385796E1FBD439500555CE5 /* Component.cpp */,
+				8385796F1FBD439500555CE5 /* Component.hpp */,
+				83ADC08C1FCBB08500157E14 /* Relational.cpp */,
+				83ADC08D1FCBB08500157E14 /* Relational.hpp */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		8385796A1FBD437900555CE5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8385796B1FBD438A00555CE5 /* Entity.cpp */,
+				8385796C1FBD438A00555CE5 /* Entity.hpp */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		838579711FBDBDE000555CE5 /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Systems;
+			sourceTree = "<group>";
+		};
+		83ADC0881FCB91CD00157E14 /* Relationship */ = {
+			isa = PBXGroup;
+			children = (
+				83ADC0891FCB91DE00157E14 /* Relationship.cpp */,
+				83ADC08A1FCB91DE00157E14 /* Relationship.hpp */,
+			);
+			path = Relationship;
+			sourceTree = "<group>";
+		};
 		B7E24664F2CC792E356892D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -840,7 +892,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = tinfish;
 				TargetAttributes = {
 					551E1EF31E6283C5009DE8AC = {
@@ -988,16 +1040,20 @@
 				832510E41EBFEA0600AA1A2E /* Emotion.cpp in Sources */,
 				837BAFF41EBFC82A00C372A9 /* FileManager.cpp in Sources */,
 				837BB0A61EBFC8C800C372A9 /* ResearchOffice.cpp in Sources */,
+				8385796D1FBD438A00555CE5 /* Entity.cpp in Sources */,
+				83ADC08B1FCB91DE00157E14 /* Relationship.cpp in Sources */,
 				832510E71EBFEA0600AA1A2E /* Happiness.cpp in Sources */,
+				83ADC08E1FCBB08500157E14 /* Relational.cpp in Sources */,
 				837BB0EA1EBFD7B400C372A9 /* AnswerButton.mm in Sources */,
 				832510E31EBFEA0600AA1A2E /* Anger.cpp in Sources */,
 				832511171EBFEB4C00AA1A2E /* Action.cpp in Sources */,
 				8325112D1EBFEDAF00AA1A2E /* Statement.cpp in Sources */,
+				838579701FBD439500555CE5 /* Component.cpp in Sources */,
 				8325111C1EBFEB4C00AA1A2E /* NextAction.cpp in Sources */,
 				832510E51EBFEA0600AA1A2E /* EmotionalState.cpp in Sources */,
 				832511191EBFEB4C00AA1A2E /* ActionPrompt.cpp in Sources */,
-				837BB0B01EBFC8C800C372A9 /* Subsytem.cpp in Sources */,
 				837BB0AC1EBFC8C800C372A9 /* Player.cpp in Sources */,
+				83ADC0831FC8426D00157E14 /* Powerable.cpp in Sources */,
 				837BB0AE1EBFC8C800C372A9 /* PowerSupply.cpp in Sources */,
 				837BAFF51EBFC82A00C372A9 /* Ticker.cpp in Sources */,
 				837BB0A51EBFC8C800C372A9 /* Location.cpp in Sources */,
@@ -1017,8 +1073,11 @@
 				837BB0E71EBFD7B400C372A9 /* MessageView.mm in Sources */,
 				832511271EBFEB4C00AA1A2E /* Goal.cpp in Sources */,
 				832511201EBFEB4C00AA1A2E /* GoalConsciousness.cpp in Sources */,
+				83ADC0811FC8418C00157E14 /* ConsciousBeing.cpp in Sources */,
 				8325111A1EBFEB4C00AA1A2E /* ActionQuestion.cpp in Sources */,
+				83ADC0911FCC465800157E14 /* ObjectMap.cpp in Sources */,
 				832510C61EBFE8F700AA1A2E /* GameState.cpp in Sources */,
+				83ADC0941FCC48F100157E14 /* WorldMap.cpp in Sources */,
 				837BB0EB1EBFD7B400C372A9 /* QuestionView.mm in Sources */,
 				837BB0EE1EBFD7B400C372A9 /* UIComponent_iOS.mm in Sources */,
 				8325111B1EBFEB4C00AA1A2E /* ActionRegistry.cpp in Sources */,
@@ -1035,6 +1094,7 @@
 				55D99E1219F2B77F00A91F20 /* main.m in Sources */,
 				832511251EBFEB4C00AA1A2E /* GoalWill.cpp in Sources */,
 				8325111D1EBFEB4C00AA1A2E /* FirstLesson.cpp in Sources */,
+				83ADC0961FCD88E600157E14 /* RamBase.cpp in Sources */,
 				837BB0F01EBFD7B400C372A9 /* FullTextView.m in Sources */,
 				832511231EBFEB4C00AA1A2E /* GoalLanguage.cpp in Sources */,
 				832510E81EBFEA0600AA1A2E /* Motivation.cpp in Sources */,
@@ -1144,14 +1204,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1190,14 +1256,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

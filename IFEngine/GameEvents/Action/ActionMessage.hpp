@@ -32,6 +32,7 @@ public:
     ActionMessage(std::string label, Message message);
     ~ActionMessage();
     Message& getMessage() { return _message; };
+    virtual void perform();
 };
 
 NS_RAM_CLOSE

@@ -10,18 +10,31 @@
 #define Powerable_h
 
 #include "RamBase.h"
+#include "PowerSupply.hpp"
+#include "Component.hpp"
 
 NS_RAM_OPEN
 
-enum PowerOnResult {
-    PowerOnResultRunning,
-    PowerOnResultNoPower,
-    PowerOnResultNotEnoughPower,
-    PowerOnResultOvercharge
+enum PowerStatus {
+    PowerStatusRunning,
+    PowerStatusNotRunning
 };
 
-class Powerable {
-    virtual PowerOnResult powerOn() = 0;
+class Powerable: public Component {
+protected:
+    PowerSupply *_powerSupply;
+    PowerStatus _status;
+    int _energyUsageLevel;
+    
+public:
+    Powerable();
+    ~Powerable();
+    int getEnergyUsageLevel() { return _energyUsageLevel; };
+    void setEnergyUsageLevel(int energyUsageLevel) { _energyUsageLevel = energyUsageLevel; };
+    bool isPowerdOn();
+    void setPowerSupply(PowerSupply *powerSupply);
+    PowerStatus getStatus() { return _status; };
+    void setStatus(PowerStatus status) { _status = status; };
 };
 
 NS_RAM_CLOSE

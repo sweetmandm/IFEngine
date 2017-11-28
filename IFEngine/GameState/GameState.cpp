@@ -12,6 +12,8 @@
 #include "Action.hpp"
 #include "GameEventStart.hpp"
 #include "EmotionalState.hpp"
+#include "Entity.hpp"
+#include "WorldMap.hpp"
 
 NS_RAM_OPEN
 
@@ -25,8 +27,10 @@ GameState::~GameState() { }
 
 GameState* GameState::makeNew() {
     auto gameState = new GameState();
-    gameState->_player = Player::makeNew();
-    gameState->_location = ResearchOffice::makeNew();
+    gameState->_player = makePlayer();
+    WorldMap *worldMap = WorldMap::generate();
+    gameState->_worldMap = worldMap;
+    gameState->_location = worldMap->getLocation();
     return gameState;
 }
 
@@ -54,7 +58,10 @@ Action* GameState::getNextAction()
 
 void GameState::applyEmotion(EmotionalStateData emotions)
 {
-    _player->applyEmotion(emotions);
+    EmotionalState *playerEmotions = _player->getComponent<EmotionalState*>();
+    if (playerEmotions) {
+        playerEmotions->apply(emotions);
+    }
 }
 
 NS_RAM_CLOSE

@@ -16,18 +16,8 @@ NS_RAM_OPEN
 class Researcher;
 
 class ResearchOffice : public Location {
-
-protected:
-    ResearchOffice();
-    ~ResearchOffice();
-    Researcher* _researcher;
-    
 public:
-    static ResearchOffice* makeNew();
-    
-    Researcher* getResearcher() { return _researcher; }
-    
-    virtual void playTurn();
+    ResearchOffice();
 };
 
 NS_RAM_CLOSE

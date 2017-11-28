@@ -10,10 +10,11 @@
 #define TurnPiece_hpp
 
 #include "RamBase.h"
+#include "Component.hpp"
 
 NS_RAM_OPEN
 
-class TurnPiece {
+class TurnPiece: public Component {
 public:
     virtual ~TurnPiece() { };
     virtual void playTurn() = 0;

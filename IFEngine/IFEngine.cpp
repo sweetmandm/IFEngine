@@ -43,33 +43,7 @@ void IFEngine::begin(GameState* state)
 
 void IFEngine::playTurn()
 {
-    auto action = _gameState->getNextAction();
-    
-    switch (action->getType()) {
-        case ActionTypeQuestion: {
-            
-            ActionQuestion* question = dynamic_cast<ActionQuestion*>(action);
-            RAM_ASSERT(question != nullptr, "Failed to cast action as ActionQuestion");
-            performQuestion(question);
-            break;
-            
-        }
-        case ActionTypeMessage: {
-            
-            ActionMessage* message = dynamic_cast<ActionMessage*>(action);
-            RAM_ASSERT(message != nullptr, "Failed to cast action as ActionMessage");
-            performMessage(message);
-            break;
-            
-        }
-        case ActionTypePrompt: {
-            
-            ActionPrompt* prompt = dynamic_cast<ActionPrompt*>(action);
-            RAM_ASSERT(prompt != nullptr, "Failed to cast action as ActionPrompt");
-            performPrompt(prompt);
-            
-        }
-    }
+    _gameState->getNextAction()->perform();
 }
 
 void IFEngine::performQuestion(ActionQuestion *question) {

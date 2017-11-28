@@ -11,6 +11,7 @@
 #include "ActionQuestion.hpp"
 #include "GameState.hpp"
 #include "Player.hpp"
+#include "Entity.hpp"
 
 NS_RAM_OPEN
 
@@ -30,8 +31,9 @@ std::string UIComponentQuestion::getQuestionText()
 
 std::vector<Answer> UIComponentQuestion::getAvailableAnswers()
 {
-    auto emotions = IFEngine::shared()->getGameState()->getPlayer()->getEmotionalState();
-    return _question->getQuestion().answersAvailableForState(emotions);
+    Entity *player = IFEngine::shared()->getGameState()->getPlayer();
+    auto playerEmotions = player->getComponent<EmotionalState*>();
+    return _question->getQuestion().answersAvailableForState(playerEmotions);
 }
 
 NS_RAM_CLOSE

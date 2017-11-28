@@ -7,6 +7,7 @@
 //
 
 #include "ActionQuestion.hpp"
+#include "IFEngine.hpp"
 
 NS_RAM_OPEN
 
@@ -29,6 +30,10 @@ void ActionQuestion::selectAnswer(Answer answer)
 {
     _selectedAnswer = answer;
     _nextAction = _selectedAnswer.next;
+}
+
+void ActionQuestion::perform() {
+    IFEngine::shared()->performQuestion(this);
 }
 
 NS_RAM_CLOSE

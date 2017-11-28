@@ -9,7 +9,8 @@
 #ifndef Location_hpp
 #define Location_hpp
 
-#include "TurnPiece.hpp"
+#include "Component.hpp"
+#include <string>
 
 NS_RAM_OPEN
 
@@ -36,22 +37,16 @@ NS_RAM_OPEN
 
 class Action;
 
-typedef struct {
-    std::string* name;
-    std::string* description;
-} LocationData;
-
-class Location : public TurnPiece {
+class Location : public Component {
 
 protected:
-    Location();
-    ~Location();
-    
-    static Location* makeWithData(LocationData);
+    std::string _name;
+    std::string _description;
     
 public:
-    virtual void playTurn();
-
+    Location(std::string name, std::string description);
+    std::string getName() { return _name; };
+    std::string getDescription() { return _description; };
 };
 
 NS_RAM_CLOSE

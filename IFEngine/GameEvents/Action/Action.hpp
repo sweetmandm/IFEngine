@@ -39,6 +39,7 @@ public:
     void setPreviousAction(Action *action);
     void setNextAction(NextAction action);
     void removeNextAction();
+    virtual void perform() = 0;
 };
 
 NS_RAM_CLOSE

@@ -8,6 +8,7 @@
 
 #include "ActionMessage.hpp"
 #include "ActionRegistry.hpp"
+#include "IFEngine.hpp"
 
 NS_RAM_OPEN
 
@@ -22,5 +23,9 @@ ActionMessage::ActionMessage(std::string label, Message message)
 { }
 
 ActionMessage::~ActionMessage() { }
+
+void ActionMessage::perform() {
+    IFEngine::shared()->performMessage(this);
+}
 
 NS_RAM_CLOSE

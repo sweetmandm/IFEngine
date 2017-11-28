@@ -9,27 +9,28 @@
 #ifndef PowerSupply_hpp
 #define PowerSupply_hpp
 
-#include "TurnPiece.hpp"
+#include "PlatformMacros.h"
+#include "Entity.hpp"
 
 NS_RAM_OPEN
 
 class Player;
 class PowerSource;
 class PowerUnit;
+class Powerable;
 
 enum PowerUsageResult {
     PowerUsageResultSuccess,
     PowerUsageResultNotEnoughPower
 };
 
-class PowerSupply : public TurnPiece {
+class PowerSupply : public Entity {
     
     PowerUnit *_powerUnit;
     PowerSource *_powerSource;
-    Player *_owner;
+    std::vector<Powerable*> _connectedDevices;
     
 protected:
-    // Called once each playTurn()
     void chargeFromSource();
     
 public:
@@ -38,6 +39,9 @@ public:
     
     PowerSupply* makePowerSupply(PowerSource *powerSource, int startPower);
     
+    void connectDevice(Powerable *powerable);
+    void disconnectDevice(Powerable *powerable);
+    
     // Wile you're plugged into the wall, your power supply is constant, and for every unit you use,
     // one is replenished. Eventually you can perform an action that uses too much power, or you can
     // go on battery supply. In those cases, you risk shutdown. Shutdown is safe as long as there is
@@ -45,11 +49,7 @@ public:
     int getRemainingPower();
     int getPowerReplenishRate();
     
-    // The owner of the power supply calls this method directly if the owner is powered on.
     PowerUsageResult usePower(int amount);
-    
-    // - TurnPiece
-    virtual void playTurn();
 };
 
 NS_RAM_CLOSE

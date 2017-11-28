@@ -10,6 +10,7 @@
 #define EmotionalState_hpp
 
 #include "RamBase.h"
+#include "Component.hpp"
 #include "Emotion.hpp"
 #include "Happiness.hpp"
 #include "Motivation.hpp"
@@ -97,7 +98,7 @@ enum EmotionalStateType {
 };
 */
 
-class EmotionalState {
+class EmotionalState : public Component {
     
 protected:
     Happiness *_happiness;
