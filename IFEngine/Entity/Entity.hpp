@@ -10,7 +10,8 @@
 #define Entity_hpp
 
 #include "RamBase.h"
-#include <vector>
+#include <unordered_map>
+#include <typeindex>
 #include "Component.hpp"
 
 NS_RAM_OPEN
@@ -18,22 +19,16 @@ NS_RAM_OPEN
 
 class Entity: public BaseObject {
 protected:
-    std::vector<Component*> _components;
+    std::unordered_map<std::type_index, Component*> _components;
 public:
-    std::vector<Component*> getComponents() { return _components; };
+    void addComponent(Component *component);
     
-    void addComponent(Component *component) { _components.push_back(component); };
+    void removeComponent(Component *component);
     
     template<typename T>
     T getComponent() {
-        auto result = std::find_if(_components.begin(),
-                                   _components.end(),
-                                   [](Component *s) { return typeid(*s) == typeid(T); });
-        if (result == _components.end()) {
-            return nullptr;
-        } else {
-            return dynamic_cast<T>(*result);
-        }
+        Component* result = _components[std::type_index(typeid(T))];
+        return dynamic_cast<T>(result);
     }
 };
 

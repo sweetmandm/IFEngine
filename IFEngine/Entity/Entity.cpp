@@ -10,4 +10,12 @@
 
 NS_RAM_OPEN
 
+void Entity::addComponent(Component *component) {
+    _components.insert({std::type_index(typeid(*component)), component});
+};
+
+void Entity::removeComponent(Component *component) {
+    _components.erase(std::type_index(typeid(*component)));
+};
+
 NS_RAM_CLOSE
