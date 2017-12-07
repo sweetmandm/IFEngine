@@ -17,4 +17,6 @@ WorldMap* WorldMap::generate() {
     return map;
 }
 
+
+
 NS_RAM_CLOSE

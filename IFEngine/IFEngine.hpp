@@ -12,12 +12,12 @@
 #include <stdio.h>
 #include "RamBase.h"
 #include "EmotionalState.hpp"
+#include "Entity.hpp"
 
 NS_RAM_OPEN
 
 class GameState;
 class ActionQuestion;
-class ActionPrompt;
 class ActionMessage;
 class GameEvent;
 class Action;
@@ -30,13 +30,13 @@ class IFEngine {
 public:
     
     static IFEngine* shared();
+    static Entity* getPlayer();
     
     GameState* getGameState() { return _gameState; };
     void begin(GameState* state);
     
     void playTurn();
     void performQuestion(ActionQuestion *question);
-    void performPrompt(ActionPrompt *prompt);
     void performMessage(ActionMessage *message);
     
     void acceptMessage(ActionMessage *message);

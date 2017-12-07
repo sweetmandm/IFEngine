@@ -32,7 +32,7 @@ std::string UIComponentQuestion::getQuestionText()
 std::vector<Answer> UIComponentQuestion::getAvailableAnswers()
 {
     Entity *player = IFEngine::shared()->getGameState()->getPlayer();
-    auto playerEmotions = player->getComponent<EmotionalState*>();
+    auto playerEmotions = player->getComponent<EmotionalState>();
     return _question->getQuestion().answersAvailableForState(playerEmotions);
 }
 

@@ -25,10 +25,12 @@ public:
     
     void removeComponent(Component *component);
     
+    std::unordered_map<std::type_index, Component*> getAllComponents() { return _components; }
+    
     template<typename T>
-    T getComponent() {
+    T* getComponent() {
         Component* result = _components[std::type_index(typeid(T))];
-        return dynamic_cast<T>(result);
+        return dynamic_cast<T*>(result);
     }
 };
 

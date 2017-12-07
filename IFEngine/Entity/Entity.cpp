@@ -7,6 +7,7 @@
 //
 
 #include "Entity.hpp"
+#include <typeindex>
 
 NS_RAM_OPEN
 

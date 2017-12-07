@@ -11,6 +11,7 @@
 #include "FirstLesson.hpp"
 #include "ActionRegistry.hpp"
 #include "IFEngine.hpp"
+#include "NameSystem.hpp"
 
 NS_RAM_OPEN
 

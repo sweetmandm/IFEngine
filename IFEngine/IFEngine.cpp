@@ -11,11 +11,12 @@
 #include "Action.hpp"
 #include "ActionQuestion.hpp"
 #include "ActionMessage.hpp"
-#include "ActionPrompt.hpp"
 #include "UIController.hpp"
 #include "ActionRegistry.hpp"
 #include "GameEvent.hpp"
 #include "GameEventStart.hpp"
+#include "UIController.hpp"
+#include "NameSystem.hpp"
 
 NS_RAM_OPEN
 
@@ -29,12 +30,17 @@ IFEngine* IFEngine::shared()
     return instance;
 }
 
+Entity* IFEngine::getPlayer() {
+    return IFEngine::shared()->getGameState()->getPlayer();
+}
+
 void IFEngine::begin(GameState* state)
 {
     if (state == nullptr) {
         _gameState = GameState::makeNew();
         auto action = GameEventStart::loadEvent();
         _gameState->setNextAction(action);
+        UIController::shared()->appendMessage(you("are conscious."));
     } else {
         _gameState = state;
     }
@@ -43,16 +49,11 @@ void IFEngine::begin(GameState* state)
 
 void IFEngine::playTurn()
 {
-    _gameState->getNextAction()->perform();
+    //_gameState->getNextAction()->perform();
 }
 
 void IFEngine::performQuestion(ActionQuestion *question) {
     UIController::shared()->showQuestion(question);
-}
-
-void IFEngine::performPrompt(ActionPrompt *prompt)
-{
-    UIController::shared()->showPrompt(prompt);
 }
 
 void IFEngine::performMessage(ActionMessage *message)

@@ -13,6 +13,7 @@
 #include "Entity.hpp"
 #include "Component.hpp"
 #include <string>
+#include "Pronoun.h"
 
 NS_RAM_OPEN
 

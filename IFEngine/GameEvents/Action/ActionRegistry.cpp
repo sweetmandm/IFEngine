@@ -9,7 +9,6 @@
 #include "ActionRegistry.hpp"
 #include "Action.hpp"
 #include "ActionMessage.hpp"
-#include "ActionPrompt.hpp"
 #include "ActionQuestion.hpp"
 
 NS_RAM_OPEN

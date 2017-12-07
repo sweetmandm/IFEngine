@@ -14,12 +14,15 @@
 #include "EmotionalState.hpp"
 #include "Entity.hpp"
 #include "WorldMap.hpp"
+#include "CreatorGenerator.hpp"
 
 NS_RAM_OPEN
 
 GameState::GameState()
 : _currentAction(nullptr)
+, _currentGameEvent(nullptr)
 , _player(nullptr)
+, _worldMap(nullptr)
 , _location(nullptr)
 { }
 
@@ -27,7 +30,8 @@ GameState::~GameState() { }
 
 GameState* GameState::makeNew() {
     auto gameState = new GameState();
-    gameState->_player = makePlayer();
+    auto creator = CreatorGenerator::generateCreator();
+    gameState->_player = CreatorGenerator::createPlayerEntity(creator);
     WorldMap *worldMap = WorldMap::generate();
     gameState->_worldMap = worldMap;
     gameState->_location = worldMap->getLocation();
@@ -58,7 +62,7 @@ Action* GameState::getNextAction()
 
 void GameState::applyEmotion(EmotionalStateData emotions)
 {
-    EmotionalState *playerEmotions = _player->getComponent<EmotionalState*>();
+    EmotionalState *playerEmotions = _player->getComponent<EmotionalState>();
     if (playerEmotions) {
         playerEmotions->apply(emotions);
     }

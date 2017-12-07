@@ -23,7 +23,7 @@ protected:
     object_id _toEntityID;
     std::string _description;
 public:
-    Relationship(Entity *from, Entity *to);
+    Relationship(Entity *from, Entity *to, std::string description);
     object_id getFromId() { return _fromEntityID; };
     object_id getToId() { return _toEntityID; };
     Entity* getFrom();

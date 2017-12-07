@@ -17,7 +17,6 @@ NS_RAM_OPEN
 
 enum ActionType {
     ActionTypeQuestion,
-    ActionTypePrompt,
     ActionTypeMessage
 };
 

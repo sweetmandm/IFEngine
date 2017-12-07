@@ -17,11 +17,12 @@ NS_RAM_OPEN
 class Action;
 class ActionMessage;
 class ActionQuestion;
-class ActionPrompt;
 class UIComponent;
+class UIComponentMessageList;
 
 class UIController {
-    
+    UIController();
+    UIComponentMessageList *_messageList;
     UIComponent *_mainComponent;
     UIComponent *_activeActionComponent;
     
@@ -32,7 +33,8 @@ public:
 
     void showMessage(ActionMessage *message);
     void showQuestion(ActionQuestion *question);
-    void showPrompt(ActionPrompt *prompt);
+    void showMessageList();
+    void appendMessage(std::string message);
     
     UIComponent* getMainComponent();
     void makeMainComponentWithView(void* view);

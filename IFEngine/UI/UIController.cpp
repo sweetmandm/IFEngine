@@ -11,10 +11,16 @@
 #include "ActionMessage.hpp"
 #include "UIComponentMessage.hpp"
 #include "UIComponentQuestion.hpp"
+#include "UIComponentMessageList.hpp"
 
 NS_RAM_OPEN
 
 static UIController* controller = nullptr;
+
+UIController::UIController()
+: _messageList(UIComponentMessageList::make())
+, _activeActionComponent(nullptr)
+{ }
 
 UIController* UIController::shared()
 {
@@ -61,6 +67,13 @@ void UIController::showMessage(ActionMessage *message)
     });
 }
 
+void UIController::showMessageList()
+{
+    showComponent([this]() -> UIComponent* {
+        return this->_messageList;
+    });
+}
+
 void UIController::showQuestion(ActionQuestion *question)
 {
     showComponent([question]() -> UIComponent* {
@@ -68,9 +81,9 @@ void UIController::showQuestion(ActionQuestion *question)
     });
 }
 
-void UIController::showPrompt(ActionPrompt *prompt)
-{
-    
+void UIController::appendMessage(std::string message) {
+    showMessageList();
+    _messageList->append(message);
 }
 
 NS_RAM_CLOSE
