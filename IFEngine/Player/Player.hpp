@@ -9,11 +9,8 @@
 #ifndef Player_hpp
 #define Player_hpp
 
-#include "Powerable.hpp"
-#include "Entity.hpp"
 #include "Component.hpp"
-#include <string>
-#include "Pronoun.h"
+#include "Entity.hpp"
 
 NS_RAM_OPEN
 
