@@ -24,16 +24,25 @@
                             <rect key="frame" x="28" y="8" width="48" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Search"/>
+                            <connections>
+                                <action selector="didPressSearch:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z2Q-Eh-BAH"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lc-Lz-lim">
                             <rect key="frame" x="168" y="8" width="39" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Learn"/>
+                            <connections>
+                                <action selector="didPressLearn:" destination="iN0-l3-epB" eventType="touchUpInside" id="yCq-He-98K"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO0-1S-fGL">
                             <rect key="frame" x="306" y="8" width="30" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="I/O"/>
+                            <connections>
+                                <action selector="didPressIO:" destination="iN0-l3-epB" eventType="touchUpInside" id="aRF-0k-eaJ"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -43,6 +43,10 @@ public:
     void answerQuestion(ActionQuestion *question, Answer answer);
     
     Action* loadGameEvent(GameEvent *event);
+    
+    void search();
+    void learn();
+    void showIO();
 };
 
 NS_RAM_CLOSE

@@ -37,6 +37,11 @@
     [self.tableView reloadData];
 }
 
+- (void)didAppendMessage {
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]]
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 - (std::vector<std::string>*)messages {
     RAM_PARAM_ASSERT(self.component);
     return self.component->getMessages();

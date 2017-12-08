@@ -14,7 +14,7 @@
 
 NS_RAM_OPEN
 
-UIComponentMain* UIComponentMain::makeWithView(void *view) {
+UIComponentMain* UIComponentMain::make() {
     auto component = new UIComponentMain_iOS();
     MainScreen *mainScreen = ([NSBundle.mainBundle loadNibNamed:@"MainScreen" owner:nil options:nil][0]);
     [mainScreen setComponent:component];

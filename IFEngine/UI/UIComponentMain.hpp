@@ -20,8 +20,11 @@ protected:
     UIComponentMessageList *_messageList;
     
 public:
-    static UIComponentMain* makeWithView(void* view);
+    static UIComponentMain* make();
     virtual void setMessageList(UIComponentMessageList *messageList) { _messageList = messageList; };
+    void didSelectSearch();
+    void didSelectLearn();
+    void didSelectIO();
 };
 
 NS_RAM_CLOSE

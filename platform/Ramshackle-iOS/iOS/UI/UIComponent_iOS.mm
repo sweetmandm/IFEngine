@@ -47,9 +47,16 @@ void UIComponent::fillParent()
     [view fillSuperview];
 }
 
-void UIComponent::show(std::function<void(void)> didShow)
+void UIComponent::show(bool animated, std::function<void(void)> didShow)
 {
     UIView *view = ((__bridge UIView*)getView());
+    
+    if (!animated) {
+        view.hidden = NO;
+        view.alpha = 1.0;
+        didShow();
+        return;
+    }
     
     view.alpha = 0.0;
     view.hidden = false;
@@ -61,9 +68,16 @@ void UIComponent::show(std::function<void(void)> didShow)
     }];
 }
 
-void UIComponent::hide(std::function<void(void)> didHide)
+void UIComponent::hide(bool animated, std::function<void(void)> didHide)
 {
     UIView *view = ((__bridge UIView*)getView());
+    
+    if (!animated) {
+        view.hidden = YES;
+        view.alpha = 0.0;
+        didHide();
+        return;
+    }
     
     view.alpha = 1.0;
     
@@ -71,7 +85,7 @@ void UIComponent::hide(std::function<void(void)> didHide)
         view.alpha = 0.0;
     } completion:^(BOOL finished) {
         didHide();
-        view.hidden = true;
+        view.hidden = YES;
     }];
 }
 
@@ -79,6 +93,7 @@ void UIComponent::addChild(UIComponent *component)
 {
     UIView *view = (__bridge UIView*)getView();
     UIView *child = (__bridge UIView*)(component->getView());
+    RAM_PARAM_ASSERT(view != child);
     [view addSubview:child];
 }
 

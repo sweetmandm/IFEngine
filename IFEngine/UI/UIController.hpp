@@ -18,16 +18,18 @@ class Action;
 class ActionMessage;
 class ActionQuestion;
 class UIComponent;
+class UIComponentMain;
 class UIComponentMessageList;
 
 class UIController {
     UIController();
     UIComponentMessageList *_messageList;
-    UIComponent *_mainComponent;
+    UIComponentMain *_mainComponent;
+    UIComponent *_base;
     UIComponent *_activeActionComponent;
     
-    void showComponent(std::function<UIComponent*(void)>makeComponent);
-    
+    void showComponent(bool animated, std::function<UIComponent*(void)>makeComponent, std::function<void(void)>completion);
+
 public:
     static UIController* shared();
 
@@ -36,8 +38,8 @@ public:
     void showMessageList();
     void appendMessage(std::string message);
     
-    UIComponent* getMainComponent();
-    void makeMainComponentWithView(void* view);
+    UIComponent* getBaseComponent();
+    void makeBaseComponentWithView(void* view);
 };
 
 NS_RAM_CLOSE

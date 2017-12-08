@@ -29,10 +29,11 @@ public:
     
     Rect frame();
     void fillParent();
-    void show(std::function<void(void)> didShow);
-    void hide(std::function<void(void)> didHide);
+    void show(bool animated, std::function<void(void)> didShow);
+    void hide(bool animated, std::function<void(void)> didHide);
     void addChild(UIComponent *component);
     void removeFromParent();
+    virtual void didRemoveFromParent();
 };
 
 NS_RAM_CLOSE

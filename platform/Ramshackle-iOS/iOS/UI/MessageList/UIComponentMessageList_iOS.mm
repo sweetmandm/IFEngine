@@ -27,7 +27,7 @@ UIComponentMessageList* UIComponentMessageList::make()
 void UIComponentMessageList_iOS::append(std::string message)
 {
     UIComponentMessageList::append(message);
-    [(__bridge MessageList*)_view reload];
+    [(__bridge MessageList*)_view didAppendMessage];
 }
 
 NS_RAM_CLOSE

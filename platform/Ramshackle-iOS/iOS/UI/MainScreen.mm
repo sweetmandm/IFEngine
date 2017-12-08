@@ -33,5 +33,16 @@
     }];
 }
 
+- (IBAction)didPressSearch:(id)sender {
+    _component->didSelectSearch();
+}
+
+- (IBAction)didPressLearn:(id)sender {
+    _component->didSelectLearn();
+}
+
+- (IBAction)didPressIO:(id)sender {
+    _component->didSelectIO();
+}
 
 @end

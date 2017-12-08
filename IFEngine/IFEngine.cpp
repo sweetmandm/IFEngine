@@ -17,6 +17,8 @@
 #include "GameEventStart.hpp"
 #include "UIController.hpp"
 #include "Description.hpp"
+#include "TextUtils.hpp"
+#include "NameSystem.hpp"
 
 NS_RAM_OPEN
 
@@ -81,6 +83,18 @@ Action* IFEngine::loadGameEvent(GameEvent *event)
 {
     RAM_LOG_STR("Activating event: " + event->getName());
     return _gameState->loadGameEvent(event);
+}
+
+void IFEngine::search() {
+    message(you("don't see anything interesting."));
+}
+
+void IFEngine::learn() {
+    message(you("are having trouble focusing."));
+}
+
+void IFEngine::showIO() {
+    message(you("don't see anybody to talk to."));
 }
 
 NS_RAM_CLOSE

@@ -8,6 +8,7 @@
 
 #include "UIController.hpp"
 #include "UIComponent.hpp"
+#include "UIComponentMain.hpp"
 #include "ActionMessage.hpp"
 #include "UIComponentMessage.hpp"
 #include "UIComponentQuestion.hpp"
@@ -30,29 +31,33 @@ UIController* UIController::shared()
     return controller;
 }
 
-void UIController::makeMainComponentWithView(void* view)
+void UIController::makeBaseComponentWithView(void* view)
 {
-    _mainComponent = UIComponent::makeWithView(view);
+    _base = UIComponent::makeWithView(view);
 }
 
-UIComponent* UIController::getMainComponent()
+UIComponent* UIController::getBaseComponent()
 {
-    return _mainComponent;
+    return _base;
 }
 
-void UIController::showComponent(std::function<UIComponent*(void)>makeComponent)
+void UIController::showComponent(bool animated, std::function<UIComponent*(void)>makeComponent, std::function<void(void)>completion)
 {
-    auto showBlock = [this, makeComponent]()mutable{
-        _activeActionComponent = makeComponent();
-        _mainComponent->addChild(_activeActionComponent);
+    auto component = makeComponent();
+    if (_activeActionComponent == component) {
+        return;
+    }
+    
+    auto showBlock = [this, animated, completion, component]()mutable{
+        _activeActionComponent = component;
+        _base->addChild(_activeActionComponent);
         _activeActionComponent->fillParent();
-        _activeActionComponent->show([]{ });
+        _activeActionComponent->show(animated, completion);
     };
     
     if (_activeActionComponent != nullptr) {
-        _activeActionComponent->hide([this, showBlock]()mutable{
+        _activeActionComponent->hide(animated, [this, showBlock]()mutable{
             _activeActionComponent->removeFromParent();
-            SAFE_DELETE(_activeActionComponent);
             showBlock();
         });
     } else {
@@ -62,23 +67,27 @@ void UIController::showComponent(std::function<UIComponent*(void)>makeComponent)
 
 void UIController::showMessage(ActionMessage *message)
 {
-    showComponent([message]() -> UIComponent* {
+    showComponent(true, [message]() -> UIComponent* {
         return UIComponentMessage::makeWithMessage(message);
-    });
+    }, []{});
 }
 
 void UIController::showMessageList()
 {
-    showComponent([this]() -> UIComponent* {
-        return this->_messageList;
-    });
+    showComponent(true, [this]() -> UIComponent* {
+        if (_mainComponent == nullptr) {
+            _mainComponent = UIComponentMain::make();
+            _mainComponent->setMessageList(_messageList);
+        }
+        return _mainComponent;
+    }, []{});
 }
 
 void UIController::showQuestion(ActionQuestion *question)
 {
-    showComponent([question]() -> UIComponent* {
+    showComponent(true, [question]() -> UIComponent* {
         return UIComponentQuestion::makeWithQuestion(question);
-    });
+    }, []{});
 }
 
 void UIController::appendMessage(std::string message) {

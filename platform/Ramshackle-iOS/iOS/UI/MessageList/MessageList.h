@@ -19,5 +19,6 @@ NS_RAM_CLOSE
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (void)setComponent:(ram::UIComponentMessageList *)component;
 - (void)reload;
+- (void)didAppendMessage;
 
 @end

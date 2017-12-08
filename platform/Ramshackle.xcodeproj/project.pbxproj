@@ -69,6 +69,8 @@
 		8326D1031FDAEBE90096BE80 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8326D1011FDAEBE90096BE80 /* MainScreen.xib */; };
 		8326D1041FDAEBE90096BE80 /* MainScreen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8326D1021FDAEBE90096BE80 /* MainScreen.mm */; };
 		8326D1091FDAED470096BE80 /* UIComponentMain_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8326D1071FDAED470096BE80 /* UIComponentMain_iOS.mm */; };
+		8326D10B1FDB23080096BE80 /* UIComponentMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8326D10A1FDB23080096BE80 /* UIComponentMain.cpp */; };
+		8326D10D1FDB29390096BE80 /* UIComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8326D10C1FDB29390096BE80 /* UIComponent.cpp */; };
 		834B66F81FCE385500849F24 /* GenderedBeing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834B66F61FCE385500849F24 /* GenderedBeing.cpp */; };
 		834B66FB1FCE465F00849F24 /* RandomSelection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834B66F91FCE465F00849F24 /* RandomSelection.cpp */; };
 		837BAFF31EBFC82A00C372A9 /* FileManager-osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = 837BAFEA1EBFC82A00C372A9 /* FileManager-osx.mm */; };
@@ -239,6 +241,8 @@
 		8326D1021FDAEBE90096BE80 /* MainScreen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainScreen.mm; sourceTree = "<group>"; };
 		8326D1071FDAED470096BE80 /* UIComponentMain_iOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UIComponentMain_iOS.mm; sourceTree = "<group>"; };
 		8326D1081FDAED470096BE80 /* UIComponentMain_iOS.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UIComponentMain_iOS.hpp; sourceTree = "<group>"; };
+		8326D10A1FDB23080096BE80 /* UIComponentMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UIComponentMain.cpp; sourceTree = "<group>"; };
+		8326D10C1FDB29390096BE80 /* UIComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UIComponent.cpp; sourceTree = "<group>"; };
 		834B66F61FCE385500849F24 /* GenderedBeing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GenderedBeing.cpp; sourceTree = "<group>"; };
 		834B66F71FCE385500849F24 /* GenderedBeing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GenderedBeing.hpp; sourceTree = "<group>"; };
 		834B66F91FCE465F00849F24 /* RandomSelection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RandomSelection.cpp; sourceTree = "<group>"; };
@@ -762,6 +766,8 @@
 			isa = PBXGroup;
 			children = (
 				837BB07A1EBFC8C800C372A9 /* UIComponent.hpp */,
+				8326D10C1FDB29390096BE80 /* UIComponent.cpp */,
+				8326D10A1FDB23080096BE80 /* UIComponentMain.cpp */,
 				837BB07C1EBFC8C800C372A9 /* UIComponentMain.hpp */,
 				837BB07D1EBFC8C800C372A9 /* UIComponentMessage.cpp */,
 				837BB07E1EBFC8C800C372A9 /* UIComponentMessage.hpp */,
@@ -1136,6 +1142,7 @@
 				832511171EBFEB4C00AA1A2E /* Action.cpp in Sources */,
 				8325112D1EBFEDAF00AA1A2E /* Statement.cpp in Sources */,
 				838579701FBD439500555CE5 /* Component.cpp in Sources */,
+				8326D10B1FDB23080096BE80 /* UIComponentMain.cpp in Sources */,
 				8325111C1EBFEB4C00AA1A2E /* NextAction.cpp in Sources */,
 				832510E51EBFEA0600AA1A2E /* EmotionalState.cpp in Sources */,
 				837BB0AC1EBFC8C800C372A9 /* Player.cpp in Sources */,
@@ -1173,6 +1180,7 @@
 				832510C61EBFE8F700AA1A2E /* GameState.cpp in Sources */,
 				83ADC0941FCC48F100157E14 /* WorldMap.cpp in Sources */,
 				837BB0EB1EBFD7B400C372A9 /* QuestionView.mm in Sources */,
+				8326D10D1FDB29390096BE80 /* UIComponent.cpp in Sources */,
 				837BB0EE1EBFD7B400C372A9 /* UIComponent_iOS.mm in Sources */,
 				8326D0F51FDA31860096BE80 /* Type.cpp in Sources */,
 				8325111B1EBFEB4C00AA1A2E /* ActionRegistry.cpp in Sources */,

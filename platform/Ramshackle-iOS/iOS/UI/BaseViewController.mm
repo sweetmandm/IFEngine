@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     
-    ram::UIController::shared()->makeMainComponentWithView((__bridge void*)self.view);
+    ram::UIController::shared()->makeBaseComponentWithView((__bridge void*)self.view);
     ram::IFEngine::shared()->begin(nullptr);
 }
 
