@@ -21,9 +21,14 @@
     [self reload];
 }
 
+- (void) setupUI {
+    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
+}
+
 - (void)setComponent:(ram::UIComponentMessageList *)component
 {
     _component = component;
+    [self setupUI];
     [self reload];
 }
 
