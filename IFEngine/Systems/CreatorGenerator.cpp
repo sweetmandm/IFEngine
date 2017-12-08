@@ -14,11 +14,16 @@
 #include "EmotionalState.hpp"
 #include "GenderedBeing.hpp"
 #include "NameSystem.hpp"
+#include "Player.hpp"
+#include "Type.hpp"
 
 NS_RAM_OPEN
 
 Entity* CreatorGenerator::generateCreator() {
     Entity *creator = new Entity();
+    
+    Type *type = new Type("human");
+    creator->addComponent(type);
     
     ConsciousBeing *consciousness = new ConsciousBeing(ConsciousBeingStateAlive);
     creator->addComponent(consciousness);
@@ -37,6 +42,12 @@ Entity* CreatorGenerator::generateCreator() {
 
 Entity* CreatorGenerator::createPlayerEntity(Entity *creator) {
     Entity *playerEntity = new Entity();
+    
+    Player *player = new Player();
+    playerEntity->addComponent(player);
+    
+    Type *type = new Type("algorithm");
+    playerEntity->addComponent(type);
     
     Powerable *powerable = new Powerable();
     playerEntity->addComponent(powerable);

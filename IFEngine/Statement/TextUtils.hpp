@@ -17,6 +17,8 @@ NS_RAM_OPEN
 extern std::string capitalize(std::string text);
 extern std::string titleize(std::string text);
 
+extern void message(std::string text);
+
 NS_RAM_CLOSE
 
 #endif /* TextUtils_hpp */

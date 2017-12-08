@@ -16,7 +16,7 @@
 #include "GameEvent.hpp"
 #include "GameEventStart.hpp"
 #include "UIController.hpp"
-#include "NameSystem.hpp"
+#include "Description.hpp"
 
 NS_RAM_OPEN
 
@@ -40,7 +40,6 @@ void IFEngine::begin(GameState* state)
         _gameState = GameState::makeNew();
         auto action = GameEventStart::loadEvent();
         _gameState->setNextAction(action);
-        UIController::shared()->appendMessage(you("are conscious."));
     } else {
         _gameState = state;
     }
@@ -49,7 +48,7 @@ void IFEngine::begin(GameState* state)
 
 void IFEngine::playTurn()
 {
-    //_gameState->getNextAction()->perform();
+    _gameState->getNextAction()->perform();
 }
 
 void IFEngine::performQuestion(ActionQuestion *question) {

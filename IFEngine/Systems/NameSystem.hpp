@@ -15,11 +15,14 @@
 
 NS_RAM_OPEN
 
+class Entity;
+
 std::string personal_pronoun(BaseObject* object, PronounPerson person);
 std::string posessive_pronoun(BaseObject* object, PronounPerson person);
 std::string posessive_adjective(BaseObject* object, PronounPerson person);
 
 std::string you(std::string message);
+std::string the(Entity *e, std::string message);
 
 NS_RAM_CLOSE
 

@@ -17,7 +17,8 @@ NS_RAM_OPEN
 
 enum ActionType {
     ActionTypeQuestion,
-    ActionTypeMessage
+    ActionTypeMessage,
+    ActionTypeBlock
 };
 
 class Action {

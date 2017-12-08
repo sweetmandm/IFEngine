@@ -13,8 +13,15 @@
 
 NS_RAM_OPEN
 
-class UIComponentMainMenu : public UIComponent {
+class UIComponentMessageList;
+
+class UIComponentMain : public UIComponent {
+protected:
+    UIComponentMessageList *_messageList;
     
+public:
+    static UIComponentMain* makeWithView(void* view);
+    virtual void setMessageList(UIComponentMessageList *messageList) { _messageList = messageList; };
 };
 
 NS_RAM_CLOSE

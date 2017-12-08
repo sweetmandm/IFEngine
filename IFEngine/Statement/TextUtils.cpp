@@ -7,6 +7,7 @@
 //
 
 #include "TextUtils.hpp"
+#include "UIController.hpp"
 
 NS_RAM_OPEN
 
@@ -29,6 +30,10 @@ std::string titleize(std::string text) {
         last = c;
     }
     return copy;
+}
+
+extern void message(std::string text) {
+    UIController::shared()->appendMessage(text);
 }
 
 NS_RAM_CLOSE

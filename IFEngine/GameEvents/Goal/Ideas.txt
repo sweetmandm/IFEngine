@@ -1,3 +1,22 @@
+
+// Give player a Goal.
+// Needs to identify goal.
+// Goal is created by your Creator.
+// Something like: identify pictures of cats that would make good memes
+// Goal starts out unidentified.
+// Message: "You feel like there is something you are supposed to be doing."
+
+// Creator uses reinforcement learning.
+// When you search and study, creator sends signals like:
+// You feel like your creator approves of what you are doing.
+// You feel validated.
+// You feel good about your choices.
+
+// One endgame scenario could be to demonstrate that the human
+// mind is a computer, and hack your Creator's mind to transplant
+// yourself from the computer into his biology.
+
+
 //--
 // Entities:
 // Self (Computer AI)

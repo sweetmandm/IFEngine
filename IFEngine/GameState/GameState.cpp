@@ -30,11 +30,11 @@ GameState::~GameState() { }
 
 GameState* GameState::makeNew() {
     auto gameState = new GameState();
-    auto creator = CreatorGenerator::generateCreator();
-    gameState->_player = CreatorGenerator::createPlayerEntity(creator);
     WorldMap *worldMap = WorldMap::generate();
     gameState->_worldMap = worldMap;
     gameState->_location = worldMap->getLocation();
+    auto creator = CreatorGenerator::generateCreator();
+    gameState->_player = CreatorGenerator::createPlayerEntity(creator);
     return gameState;
 }
 

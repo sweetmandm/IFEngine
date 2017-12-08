@@ -63,6 +63,12 @@
 		8326D0E51FD96EEA0096BE80 /* MessageList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8326D0E41FD96EEA0096BE80 /* MessageList.xib */; };
 		8326D0EB1FD988B40096BE80 /* MessageListCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8326D0E91FD988B40096BE80 /* MessageListCell.mm */; };
 		8326D0EC1FD988B40096BE80 /* MessageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8326D0EA1FD988B40096BE80 /* MessageListCell.xib */; };
+		8326D0EF1FD9AFB60096BE80 /* Description.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8326D0ED1FD9AFB60096BE80 /* Description.cpp */; };
+		8326D0F21FDA29AD0096BE80 /* ActionBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8326D0F01FDA29AD0096BE80 /* ActionBlock.cpp */; };
+		8326D0F51FDA31860096BE80 /* Type.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8326D0F31FDA31860096BE80 /* Type.cpp */; };
+		8326D1031FDAEBE90096BE80 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8326D1011FDAEBE90096BE80 /* MainScreen.xib */; };
+		8326D1041FDAEBE90096BE80 /* MainScreen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8326D1021FDAEBE90096BE80 /* MainScreen.mm */; };
+		8326D1091FDAED470096BE80 /* UIComponentMain_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8326D1071FDAED470096BE80 /* UIComponentMain_iOS.mm */; };
 		834B66F81FCE385500849F24 /* GenderedBeing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834B66F61FCE385500849F24 /* GenderedBeing.cpp */; };
 		834B66FB1FCE465F00849F24 /* RandomSelection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834B66F91FCE465F00849F24 /* RandomSelection.cpp */; };
 		837BAFF31EBFC82A00C372A9 /* FileManager-osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = 837BAFEA1EBFC82A00C372A9 /* FileManager-osx.mm */; };
@@ -222,6 +228,17 @@
 		8326D0E81FD988B40096BE80 /* MessageListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListCell.h; sourceTree = "<group>"; };
 		8326D0E91FD988B40096BE80 /* MessageListCell.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MessageListCell.mm; sourceTree = "<group>"; };
 		8326D0EA1FD988B40096BE80 /* MessageListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageListCell.xib; sourceTree = "<group>"; };
+		8326D0ED1FD9AFB60096BE80 /* Description.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Description.cpp; sourceTree = "<group>"; };
+		8326D0EE1FD9AFB60096BE80 /* Description.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Description.hpp; sourceTree = "<group>"; };
+		8326D0F01FDA29AD0096BE80 /* ActionBlock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ActionBlock.cpp; sourceTree = "<group>"; };
+		8326D0F11FDA29AD0096BE80 /* ActionBlock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ActionBlock.hpp; sourceTree = "<group>"; };
+		8326D0F31FDA31860096BE80 /* Type.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Type.cpp; sourceTree = "<group>"; };
+		8326D0F41FDA31860096BE80 /* Type.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Type.hpp; sourceTree = "<group>"; };
+		8326D1001FDAEBE90096BE80 /* MainScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreen.h; sourceTree = "<group>"; };
+		8326D1011FDAEBE90096BE80 /* MainScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
+		8326D1021FDAEBE90096BE80 /* MainScreen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainScreen.mm; sourceTree = "<group>"; };
+		8326D1071FDAED470096BE80 /* UIComponentMain_iOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UIComponentMain_iOS.mm; sourceTree = "<group>"; };
+		8326D1081FDAED470096BE80 /* UIComponentMain_iOS.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UIComponentMain_iOS.hpp; sourceTree = "<group>"; };
 		834B66F61FCE385500849F24 /* GenderedBeing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GenderedBeing.cpp; sourceTree = "<group>"; };
 		834B66F71FCE385500849F24 /* GenderedBeing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GenderedBeing.hpp; sourceTree = "<group>"; };
 		834B66F91FCE465F00849F24 /* RandomSelection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RandomSelection.cpp; sourceTree = "<group>"; };
@@ -252,7 +269,7 @@
 		837BB0581EBFC8C800C372A9 /* PowerUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PowerUnit.cpp; sourceTree = "<group>"; };
 		837BB0591EBFC8C800C372A9 /* PowerUnit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PowerUnit.hpp; sourceTree = "<group>"; };
 		837BB07A1EBFC8C800C372A9 /* UIComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UIComponent.hpp; sourceTree = "<group>"; };
-		837BB07C1EBFC8C800C372A9 /* UIComponentMainMenu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UIComponentMainMenu.hpp; sourceTree = "<group>"; };
+		837BB07C1EBFC8C800C372A9 /* UIComponentMain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UIComponentMain.hpp; sourceTree = "<group>"; };
 		837BB07D1EBFC8C800C372A9 /* UIComponentMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIComponentMessage.cpp; sourceTree = "<group>"; };
 		837BB07E1EBFC8C800C372A9 /* UIComponentMessage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UIComponentMessage.hpp; sourceTree = "<group>"; };
 		837BB07F1EBFC8C800C372A9 /* UIComponentQuestion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIComponentQuestion.cpp; sourceTree = "<group>"; };
@@ -558,6 +575,8 @@
 			children = (
 				832510ED1EBFEB4C00AA1A2E /* Action.cpp */,
 				832510EE1EBFEB4C00AA1A2E /* Action.hpp */,
+				8326D0F01FDA29AD0096BE80 /* ActionBlock.cpp */,
+				8326D0F11FDA29AD0096BE80 /* ActionBlock.hpp */,
 				832510EF1EBFEB4C00AA1A2E /* ActionMessage.cpp */,
 				832510F01EBFEB4C00AA1A2E /* ActionMessage.hpp */,
 				832510F31EBFEB4C00AA1A2E /* ActionQuestion.cpp */,
@@ -743,7 +762,7 @@
 			isa = PBXGroup;
 			children = (
 				837BB07A1EBFC8C800C372A9 /* UIComponent.hpp */,
-				837BB07C1EBFC8C800C372A9 /* UIComponentMainMenu.hpp */,
+				837BB07C1EBFC8C800C372A9 /* UIComponentMain.hpp */,
 				837BB07D1EBFC8C800C372A9 /* UIComponentMessage.cpp */,
 				837BB07E1EBFC8C800C372A9 /* UIComponentMessage.hpp */,
 				837BB07F1EBFC8C800C372A9 /* UIComponentQuestion.cpp */,
@@ -771,6 +790,11 @@
 			children = (
 				837BB0CE1EBFD7B400C372A9 /* BaseViewController.h */,
 				837BB0CF1EBFD7B400C372A9 /* BaseViewController.mm */,
+				8326D1001FDAEBE90096BE80 /* MainScreen.h */,
+				8326D1021FDAEBE90096BE80 /* MainScreen.mm */,
+				8326D1011FDAEBE90096BE80 /* MainScreen.xib */,
+				8326D1071FDAED470096BE80 /* UIComponentMain_iOS.mm */,
+				8326D1081FDAED470096BE80 /* UIComponentMain_iOS.hpp */,
 				8326D0DB1FD795FD0096BE80 /* MessageList */,
 				837BB0D01EBFD7B400C372A9 /* Message */,
 				837BB0D61EBFD7B400C372A9 /* Question */,
@@ -840,6 +864,8 @@
 				834B66F61FCE385500849F24 /* GenderedBeing.cpp */,
 				834B66F71FCE385500849F24 /* GenderedBeing.hpp */,
 				834B66FC1FCEEC9400849F24 /* Pronoun.h */,
+				8326D0F31FDA31860096BE80 /* Type.cpp */,
+				8326D0F41FDA31860096BE80 /* Type.hpp */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -862,6 +888,8 @@
 				83ADC09B1FCE057D00157E14 /* NameSystem.hpp */,
 				834B66F91FCE465F00849F24 /* RandomSelection.cpp */,
 				834B66FA1FCE465F00849F24 /* RandomSelection.hpp */,
+				8326D0ED1FD9AFB60096BE80 /* Description.cpp */,
+				8326D0EE1FD9AFB60096BE80 /* Description.hpp */,
 			);
 			path = Systems;
 			sourceTree = "<group>";
@@ -1006,6 +1034,7 @@
 				556C6CB21C2C3EE700EA74E4 /* LiberationMono-Regular.ttf in Resources */,
 				832511281EBFEB4C00AA1A2E /* Ideas.txt in Resources */,
 				8326D0E51FD96EEA0096BE80 /* MessageList.xib in Resources */,
+				8326D1031FDAEBE90096BE80 /* MainScreen.xib in Resources */,
 				8326D0EC1FD988B40096BE80 /* MessageListCell.xib in Resources */,
 				556C6CB01C2C3EE700EA74E4 /* LiberationMono-BoldItalic.ttf in Resources */,
 				55D99E1D19F2B77F00A91F20 /* Images.xcassets in Resources */,
@@ -1110,6 +1139,7 @@
 				8325111C1EBFEB4C00AA1A2E /* NextAction.cpp in Sources */,
 				832510E51EBFEA0600AA1A2E /* EmotionalState.cpp in Sources */,
 				837BB0AC1EBFC8C800C372A9 /* Player.cpp in Sources */,
+				8326D0F21FDA29AD0096BE80 /* ActionBlock.cpp in Sources */,
 				8326D0D71FD77FCD0096BE80 /* TextUtils.cpp in Sources */,
 				83ADC0831FC8426D00157E14 /* Powerable.cpp in Sources */,
 				837BB0AE1EBFC8C800C372A9 /* PowerSupply.cpp in Sources */,
@@ -1144,12 +1174,15 @@
 				83ADC0941FCC48F100157E14 /* WorldMap.cpp in Sources */,
 				837BB0EB1EBFD7B400C372A9 /* QuestionView.mm in Sources */,
 				837BB0EE1EBFD7B400C372A9 /* UIComponent_iOS.mm in Sources */,
+				8326D0F51FDA31860096BE80 /* Type.cpp in Sources */,
 				8325111B1EBFEB4C00AA1A2E /* ActionRegistry.cpp in Sources */,
 				837BAFF61EBFC82A00C372A9 /* Ticker_iOS.mm in Sources */,
+				8326D1091FDAED470096BE80 /* UIComponentMain_iOS.mm in Sources */,
 				832511181EBFEB4C00AA1A2E /* ActionMessage.cpp in Sources */,
 				837BB0E61EBFD7B400C372A9 /* BaseViewController.mm in Sources */,
 				837BB0A41EBFC8C800C372A9 /* IFEngine.cpp in Sources */,
 				832510CA1EBFE9E100AA1A2E /* NotificationSystem.cpp in Sources */,
+				8326D0EF1FD9AFB60096BE80 /* Description.cpp in Sources */,
 				837BAFF31EBFC82A00C372A9 /* FileManager-osx.mm in Sources */,
 				832511291EBFEB4C00AA1A2E /* GoalResearchAI.cpp in Sources */,
 				837BB0AF1EBFC8C800C372A9 /* PowerUnit.cpp in Sources */,
@@ -1158,6 +1191,7 @@
 				55D99E1219F2B77F00A91F20 /* main.m in Sources */,
 				832511251EBFEB4C00AA1A2E /* GoalWill.cpp in Sources */,
 				8325111D1EBFEB4C00AA1A2E /* FirstLesson.cpp in Sources */,
+				8326D1041FDAEBE90096BE80 /* MainScreen.mm in Sources */,
 				83ADC0961FCD88E600157E14 /* RamBase.cpp in Sources */,
 				837BB0F01EBFD7B400C372A9 /* FullTextView.m in Sources */,
 				832511231EBFEB4C00AA1A2E /* GoalLanguage.cpp in Sources */,

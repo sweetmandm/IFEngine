@@ -13,6 +13,7 @@
 #include "Player.hpp"
 #include "GenderedBeing.hpp"
 #include "TextUtils.hpp"
+#include "Type.hpp"
 
 NS_RAM_OPEN
 
@@ -78,6 +79,18 @@ std::string posessive_adjective(BaseObject *object, PronounPerson person) {
 
 std::string you(std::string message) {
     return capitalize(personal_pronoun(IFEngine::getPlayer(), SecondPersonSingular) + " " + message);
+}
+
+std::string type(Entity *e) {
+    Type *type = e->getComponent<Type>();
+    if (type) {
+        return type->getType();
+    }
+    return "thing";
+}
+
+std::string the(Entity *e, std::string message) {
+    return "The " + type(e) + " " + message;
 }
 
 NS_RAM_CLOSE
