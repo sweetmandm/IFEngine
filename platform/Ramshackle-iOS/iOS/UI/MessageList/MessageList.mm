@@ -43,8 +43,16 @@
 }
 
 - (void)didAppendMessage {
-    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]]
-                          withRowAnimation:UITableViewRowAnimationAutomatic];
+    BOOL topIsVisible = ((NSIndexPath*)[[self.tableView indexPathsForVisibleRows] firstObject]).row == 0;
+    if (topIsVisible) {
+        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+    } else {
+        [self.tableView reloadData];
+    }
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
+                          atScrollPosition:UITableViewScrollPositionTop
+                                  animated:YES];
 }
 
 - (std::vector<std::string>*)messages {
