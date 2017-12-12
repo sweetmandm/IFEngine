@@ -17,7 +17,7 @@ NS_RAM_OPEN
 class CreatorGenerator {
 public:
     static Entity* generateCreator();
-    static Entity* createPlayerEntity(Entity *creator);
+    static Entity* createPlayerEntity(Entity *creator, Entity *computer);
 };
 
 NS_RAM_CLOSE

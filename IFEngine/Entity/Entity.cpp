@@ -8,14 +8,17 @@
 
 #include "Entity.hpp"
 #include <typeindex>
+#include "Component.hpp"
 
 NS_RAM_OPEN
 
 void Entity::addComponent(Component *component) {
+    component->setOwner(this);
     _components.insert({std::type_index(typeid(*component)), component});
 };
 
 void Entity::removeComponent(Component *component) {
+    component->setOwner(nullptr);
     _components.erase(std::type_index(typeid(*component)));
 };
 

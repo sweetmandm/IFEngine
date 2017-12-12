@@ -16,6 +16,10 @@
 #include "NameSystem.hpp"
 #include "Player.hpp"
 #include "Type.hpp"
+#include "Physical.hpp"
+#include "Software.hpp"
+#include "Data.hpp"
+#include "OperatingSystem.hpp"
 
 NS_RAM_OPEN
 
@@ -24,6 +28,9 @@ Entity* CreatorGenerator::generateCreator() {
     
     Type *type = new Type("human");
     creator->addComponent(type);
+    
+    Physical *body = new Physical();
+    creator->addComponent(body);
     
     ConsciousBeing *consciousness = new ConsciousBeing(ConsciousBeingStateAlive);
     creator->addComponent(consciousness);
@@ -40,7 +47,7 @@ Entity* CreatorGenerator::generateCreator() {
     return creator;
 }
 
-Entity* CreatorGenerator::createPlayerEntity(Entity *creator) {
+Entity* CreatorGenerator::createPlayerEntity(Entity *creator, Entity *computer) {
     Entity *playerEntity = new Entity();
     
     Player *player = new Player();
@@ -49,8 +56,9 @@ Entity* CreatorGenerator::createPlayerEntity(Entity *creator) {
     Type *type = new Type("algorithm");
     playerEntity->addComponent(type);
     
-    Powerable *powerable = new Powerable();
-    playerEntity->addComponent(powerable);
+    Software *software = new Software(600, 74);
+    playerEntity->addComponent(software);
+    software->installOn(computer);
     
     ConsciousBeing *consciousness = new ConsciousBeing(ConsciousBeingStateDead);
     playerEntity->addComponent(consciousness);

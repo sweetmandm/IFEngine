@@ -7,7 +7,12 @@
 //
 
 #include "Component.hpp"
+#include "Entity.hpp"
 
 NS_RAM_OPEN
+
+Component::Component()
+: _owner(nullptr)
+{ }
 
 NS_RAM_CLOSE

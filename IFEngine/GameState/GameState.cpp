@@ -15,6 +15,8 @@
 #include "Entity.hpp"
 #include "WorldMap.hpp"
 #include "CreatorGenerator.hpp"
+#include "ComputerGenerator.hpp"
+#include "Physical.hpp"
 
 NS_RAM_OPEN
 
@@ -30,11 +32,19 @@ GameState::~GameState() { }
 
 GameState* GameState::makeNew() {
     auto gameState = new GameState();
+    
     WorldMap *worldMap = WorldMap::generate();
+    ResearchOffice *startLocation = worldMap->getStartLocation();
     gameState->_worldMap = worldMap;
-    gameState->_location = worldMap->getLocation();
+    gameState->_location = startLocation;
+    
     auto creator = CreatorGenerator::generateCreator();
-    gameState->_player = CreatorGenerator::createPlayerEntity(creator);
+    creator->getComponent<Physical>()->moveTo(startLocation);
+    
+    auto computer = startLocation->getComputer();
+    auto player = CreatorGenerator::createPlayerEntity(creator, computer);
+    gameState->_player = player;
+    
     return gameState;
 }
 

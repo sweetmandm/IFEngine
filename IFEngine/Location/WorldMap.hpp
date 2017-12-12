@@ -10,16 +10,16 @@
 #define WorldMap_hpp
 
 #include "RamBase.h"
-#include "Location.hpp"
+#include "ResearchOffice.hpp"
 
 NS_RAM_OPEN
 
 class WorldMap {
-    Location* _location;
+    ResearchOffice* _startLocation;
 public:
     static WorldMap* generate();
     
-    Location* getLocation() { return _location; };
+    ResearchOffice* getStartLocation() { return _startLocation; };
 };
 
 NS_RAM_CLOSE

@@ -12,10 +12,11 @@
 #include "RamBase.h"
 #include <unordered_map>
 #include <typeindex>
-#include "Component.hpp"
+//#include "Component.hpp"
 
 NS_RAM_OPEN
 
+class Component;
 
 class Entity: public BaseObject {
 protected:

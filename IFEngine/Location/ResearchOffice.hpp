@@ -16,8 +16,11 @@ NS_RAM_OPEN
 class Researcher;
 
 class ResearchOffice : public Location {
+    Entity *_computer;
+    Entity *_router;
 public:
     ResearchOffice();
+    Entity* getComputer() { return _computer; };
 };
 
 NS_RAM_CLOSE

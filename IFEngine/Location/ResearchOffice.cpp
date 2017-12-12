@@ -9,6 +9,8 @@
 #include "ResearchOffice.hpp"
 #include "Researcher.hpp"
 #include "Action.hpp"
+#include "ComputerGenerator.hpp"
+#include "ComputerNetworkInterfaces.hpp"
 
 NS_RAM_OPEN
 
@@ -17,7 +19,12 @@ ResearchOffice::ResearchOffice()
     "Research Office",
     "There is a chill."
 })
+, _router(ComputerGenerator::generateRouter())
+, _computer(ComputerGenerator::generateComputer())
 {
+    addObject(_router);
+    addObject(_computer);
+    ComputerGenerator::connect(_router->getComponent<Router>(), {_computer});
     /* IDEA:
      The Location gets a bunch of randomly-generated Components.
      

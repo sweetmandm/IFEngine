@@ -16,9 +16,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EdN-wA-jao">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tj5-hq-iNu">
+                    <rect key="frame" x="0.0" y="20" width="375" height="88"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="FTA-25-dJo"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ij7-aP-6pU">
+                    <rect key="frame" x="0.0" y="108" width="375" height="423"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdN-wA-jao">
                     <rect key="frame" x="0.0" y="539" width="375" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hE-GV-KTn">
                             <rect key="frame" x="28" y="8" width="48" height="30"/>
@@ -30,7 +40,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lc-Lz-lim">
                             <rect key="frame" x="168" y="8" width="39" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Learn"/>
                             <connections>
                                 <action selector="didPressLearn:" destination="iN0-l3-epB" eventType="touchUpInside" id="yCq-He-98K"/>
@@ -38,7 +48,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO0-1S-fGL">
                             <rect key="frame" x="306" y="8" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="I/O"/>
                             <connections>
                                 <action selector="didPressIO:" destination="iN0-l3-epB" eventType="touchUpInside" id="aRF-0k-eaJ"/>
@@ -46,19 +56,24 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ij7-aP-6pU">
-                    <rect key="frame" x="0.0" y="88" width="375" height="452"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tj5-hq-iNu">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="n9Q-aD-iCU"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ij7-aP-6pU" firstAttribute="top" secondItem="tj5-hq-iNu" secondAttribute="bottom" id="2aD-Ed-YTh"/>
+                <constraint firstItem="Ij7-aP-6pU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BDa-Pz-d5L"/>
+                <constraint firstItem="EdN-wA-jao" firstAttribute="top" secondItem="Ij7-aP-6pU" secondAttribute="bottom" constant="8" id="JmZ-S8-db8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EdN-wA-jao" secondAttribute="bottom" id="L9H-eN-JFI"/>
+                <constraint firstItem="tj5-hq-iNu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bwU-6a-tMr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ij7-aP-6pU" secondAttribute="trailing" id="dF9-4x-ZQD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tj5-hq-iNu" secondAttribute="trailing" id="dXJ-Zd-O3z"/>
+                <constraint firstItem="EdN-wA-jao" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fSq-hi-gSk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="tj5-hq-iNu" secondAttribute="top" id="fjy-sQ-xYG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EdN-wA-jao" secondAttribute="trailing" id="mz1-Ik-qHh"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="bottomControls" destination="EdN-wA-jao" id="hBo-yy-ip7"/>

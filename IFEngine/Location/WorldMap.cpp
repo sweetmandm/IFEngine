@@ -13,7 +13,7 @@ NS_RAM_OPEN
 
 WorldMap* WorldMap::generate() {
     WorldMap *map = new WorldMap();
-    map->_location = new ResearchOffice();
+    map->_startLocation = new ResearchOffice();
     return map;
 }
 
