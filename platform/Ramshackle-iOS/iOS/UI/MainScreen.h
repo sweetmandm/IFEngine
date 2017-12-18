@@ -24,5 +24,6 @@ NS_RAM_CLOSE
 @property (weak, nonatomic) IBOutlet UIView *bottomControls;
 
 - (void)addMessageList:(UIView *)messageList;
+- (void)showSearchMenu;
 
 @end

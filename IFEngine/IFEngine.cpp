@@ -86,6 +86,7 @@ Action* IFEngine::loadGameEvent(GameEvent *event)
 }
 
 void IFEngine::search() {
+    UIController::shared()->showSearchMenu();
     message(you("don't see anything interesting."));
 }
 

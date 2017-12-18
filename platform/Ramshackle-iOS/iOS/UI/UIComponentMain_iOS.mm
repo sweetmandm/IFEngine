@@ -36,4 +36,8 @@ void UIComponentMain_iOS::setMessageList(UIComponentMessageList *messageList) {
     }];
 };
 
+void UIComponentMain_iOS::showSearchMenu() {
+    [getMainScreen() showSearchMenu];
+}
+
 NS_RAM_CLOSE

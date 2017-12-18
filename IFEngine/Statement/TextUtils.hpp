@@ -10,6 +10,8 @@
 #define TextUtils_hpp
 
 #include "RamBase.h"
+#include "NameSystem.hpp"
+#include "Description.hpp"
 #include <string>
 
 NS_RAM_OPEN

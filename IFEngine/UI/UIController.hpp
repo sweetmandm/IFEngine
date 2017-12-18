@@ -35,11 +35,13 @@ public:
 
     void showMessage(ActionMessage *message);
     void showQuestion(ActionQuestion *question);
-    void showMessageList();
+    void showMainComponent();
     void appendMessage(std::string message);
     
     UIComponent* getBaseComponent();
     void makeBaseComponentWithView(void* view);
+    
+    void showSearchMenu();
 };
 
 NS_RAM_CLOSE

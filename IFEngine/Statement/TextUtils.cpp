@@ -8,6 +8,7 @@
 
 #include "TextUtils.hpp"
 #include "UIController.hpp"
+#include "TTS.hpp"
 
 NS_RAM_OPEN
 
@@ -33,6 +34,7 @@ std::string titleize(std::string text) {
 }
 
 extern void message(std::string text) {
+    TTS::speak(text);
     UIController::shared()->appendMessage(text);
 }
 

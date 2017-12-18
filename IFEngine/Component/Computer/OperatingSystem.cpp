@@ -66,4 +66,20 @@ UninstallationResult OperatingSystem::uninstallSoftware(Software *software) {
     return UninstallationSuccess;
 }
 
+bool OperatingSystem::startProgram(Software *program) {
+    if (program->start()) {
+        _runningPrograms.push_back(program);
+        return true;
+    }
+    return false;
+}
+
+bool OperatingSystem::killProgram(Software *program) {
+    if (program->kill()) {
+        _runningPrograms.erase(std::find(_runningPrograms.begin(), _runningPrograms.end(), program));
+        return true;
+    }
+    return false;
+}
+
 NS_RAM_CLOSE

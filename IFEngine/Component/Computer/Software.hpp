@@ -30,6 +30,7 @@ enum UninstallationResult {
 class Software : public Component {
     int _memoryReq;
     int _diskReq;
+    int _pid;
     ComputerSSD *_installLocation;
 public:
 
@@ -40,8 +41,14 @@ public:
     int getMemoryReq() { return _memoryReq; };
     int getDiskReq() { return _diskReq; };
     
+    Entity* getComputer();
     virtual InstallationResult installOn(Entity *computer);
     virtual UninstallationResult uninstallOn(Entity *computer);
+    
+    void setPid(int pid) { _pid = pid; };
+    bool isRunning() { return _pid > -1; };
+    virtual bool start();
+    virtual bool kill();
 };
 
 NS_RAM_CLOSE

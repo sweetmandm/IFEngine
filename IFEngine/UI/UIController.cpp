@@ -72,7 +72,7 @@ void UIController::showMessage(ActionMessage *message)
     }, []{});
 }
 
-void UIController::showMessageList()
+void UIController::showMainComponent()
 {
     showComponent(true, [this]() -> UIComponent* {
         if (_mainComponent == nullptr) {
@@ -91,8 +91,13 @@ void UIController::showQuestion(ActionQuestion *question)
 }
 
 void UIController::appendMessage(std::string message) {
-    showMessageList();
+    showMainComponent();
     _messageList->append(message);
+}
+
+void UIController::showSearchMenu() {
+    showMainComponent();
+    _mainComponent->showSearchMenu();
 }
 
 NS_RAM_CLOSE

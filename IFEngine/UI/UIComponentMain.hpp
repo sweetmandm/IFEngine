@@ -22,6 +22,7 @@ protected:
 public:
     static UIComponentMain* make();
     virtual void setMessageList(UIComponentMessageList *messageList) { _messageList = messageList; };
+    virtual void showSearchMenu() = 0;
     void didSelectSearch();
     void didSelectLearn();
     void didSelectIO();

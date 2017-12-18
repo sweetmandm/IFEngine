@@ -15,12 +15,15 @@ NS_RAM_OPEN
 
 class OperatingSystem : public Software {
     std::vector<Software*> _installedPrograms;
+    std::vector<Software*> _runningPrograms;
 public:
     OperatingSystem(int memoryReq, int diskReq);
     virtual InstallationResult installOn(Entity *computer);
     virtual UninstallationResult uninstallOn(Entity *computer);
     InstallationResult installSoftware(Software *software);
     UninstallationResult uninstallSoftware(Software *software);
+    bool startProgram(Software *program);
+    bool killProgram(Software *program);
 };
 
 NS_RAM_CLOSE

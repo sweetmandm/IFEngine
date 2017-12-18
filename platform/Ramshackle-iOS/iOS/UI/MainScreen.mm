@@ -45,4 +45,8 @@
     _component->didSelectIO();
 }
 
+- (void)showSearchMenu {
+    
+}
+
 @end

@@ -13,6 +13,7 @@
 #include "IFEngine.hpp"
 #include "Description.hpp"
 #include "ActionBlock.hpp"
+#include "PlayerSoftwareSystem.hpp"
 
 NS_RAM_OPEN
 
@@ -38,31 +39,8 @@ void GameEventStart::registerActions()
     registerAction(ActionBlock(GameEntryLabel, []() -> void {
         Entity *player = IFEngine::shared()->getPlayer();
         describe_consciousness(player);
+        PlayerSoftwareSystem::start(player);
     }));
-    
-//    auto intro_2 = "intro_2";
-//    auto intro_3 = "intro_3";
-//
-//    registerAction(ActionMessage(GameEntryLabel, {
-//        .text = "<allocate memory>",
-//        .accept = "NEXT INSTRUCTION",
-//        .impact = EMOTION_ZERO
-//    }, NextAction(intro_2)));
-//
-//    registerAction(ActionMessage(intro_2, {
-//        .text = "<initialize registers>",
-//        .accept = "NEXT INSTRUCTION",
-//        .impact = EMOTION_ZERO
-//    }, NextAction(intro_3)));
-//
-//    registerAction(ActionMessage(intro_3, {
-//        .text = "_main:",
-//        .accept = "NEXT INSTRUCTION",
-//        .impact = EMOTION_ZERO
-//    }, NextAction([this]() -> Action* {
-//        unregisterActions();
-//        return FirstLesson::loadEvent();
-//    })));
 }
 
 NS_RAM_CLOSE
