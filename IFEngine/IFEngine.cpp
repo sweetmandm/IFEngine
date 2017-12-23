@@ -19,6 +19,8 @@
 #include "Description.hpp"
 #include "TextUtils.hpp"
 #include "NameSystem.hpp"
+#include "Software.hpp"
+#include "DataSearchSystem.hpp"
 
 NS_RAM_OPEN
 
@@ -87,7 +89,13 @@ Action* IFEngine::loadGameEvent(GameEvent *event)
 
 void IFEngine::search() {
     UIController::shared()->showSearchMenu();
-    message(you("don't see anything interesting."));
+    auto sw = getPlayer()->getComponent<Software>();
+    auto data = DataSearchSystem::search(sw->getComputer());
+    if (data->textRepresentation().length() > 0) {
+        message(you("found coherent data:\n" + data->textRepresentation()));
+    } else {
+        message(you("found corrupted data."));
+    }
 }
 
 void IFEngine::learn() {

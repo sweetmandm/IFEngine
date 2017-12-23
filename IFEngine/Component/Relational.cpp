@@ -22,4 +22,8 @@ Relationship* Relational::getRelationshipTo(object_id objectId) {
     return _relationships[objectId];
 }
 
+Relationship* Relational::getRelationshipTo(BaseObject *object) {
+    return getRelationshipTo(object->getObjectId());
+}
+
 NS_RAM_CLOSE

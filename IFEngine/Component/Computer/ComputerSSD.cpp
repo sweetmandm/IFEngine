@@ -9,6 +9,7 @@
 #include "ComputerSSD.hpp"
 #include "Software.hpp"
 #include "Data.hpp"
+#include "RandomSelection.hpp"
 
 NS_RAM_OPEN
 
@@ -18,22 +19,31 @@ ComputerSSD::ComputerSSD(int sizeInMB)
 { }
 
 void ComputerSSD::removeDataObject(BaseObject *dataObject) {
-    auto found = std::find_if(_data.begin(), _data.end(), [dataObject](Data *data) {
-        return data->getData() == dataObject;
+    auto found = std::find_if(_data.begin(), _data.end(), [dataObject](Data data) {
+        return data.getData() == dataObject;
     });
     if (found == _data.end()) { return; }
     auto data = *found;
-    _used = std::max(0, _used - data->getSize());
+    _used = std::max(0, _used - data.getSize());
     _data.erase(found);
 }
 
-bool ComputerSSD::addData(Data *data) {
-    if (_used + data->getSize() > _size) {
+bool ComputerSSD::addData(Data data) {
+    if (_used + data.getSize() > _size) {
         return false;
     }
-    _used += data->getSize();
+    _used += data.getSize();
     _data.push_back(data);
     return true;
 };
+
+Data* ComputerSSD::randomDataItem() {
+    auto result = random_in(_data.begin(), _data.end());
+    if (result != _data.end()) {
+        return &(*result);
+    }
+    return nullptr;
+}
+
 
 NS_RAM_CLOSE

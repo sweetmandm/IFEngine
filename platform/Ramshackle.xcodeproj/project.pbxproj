@@ -123,6 +123,10 @@
 		83ADC0961FCD88E600157E14 /* RamBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ADC0951FCD88E600157E14 /* RamBase.cpp */; };
 		83ADC0991FCDBAB500157E14 /* CreatorGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ADC0971FCDBAB500157E14 /* CreatorGenerator.cpp */; };
 		83ADC09C1FCE057D00157E14 /* NameSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ADC09A1FCE057D00157E14 /* NameSystem.cpp */; };
+		83E441681FE822D200E6A592 /* DataGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83E441661FE822D200E6A592 /* DataGenerator.cpp */; };
+		83E4416B1FEA241900E6A592 /* RelationshipSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83E441691FEA241900E6A592 /* RelationshipSystem.cpp */; };
+		83E4416F1FEBFAB900E6A592 /* DataContentText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83E4416D1FEBFAB900E6A592 /* DataContentText.cpp */; };
+		83E441721FED5F7400E6A592 /* DataSearchSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83E441701FED5F7400E6A592 /* DataSearchSystem.cpp */; };
 		A134AC0D99FD598F56CAC181 /* libPods-Ramshackle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC925988E75236FBC4CCD460 /* libPods-Ramshackle-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -364,6 +368,14 @@
 		83ADC0981FCDBAB500157E14 /* CreatorGenerator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CreatorGenerator.hpp; sourceTree = "<group>"; };
 		83ADC09A1FCE057D00157E14 /* NameSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NameSystem.cpp; sourceTree = "<group>"; };
 		83ADC09B1FCE057D00157E14 /* NameSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NameSystem.hpp; sourceTree = "<group>"; };
+		83E441661FE822D200E6A592 /* DataGenerator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataGenerator.cpp; sourceTree = "<group>"; };
+		83E441671FE822D200E6A592 /* DataGenerator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataGenerator.hpp; sourceTree = "<group>"; };
+		83E441691FEA241900E6A592 /* RelationshipSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RelationshipSystem.cpp; sourceTree = "<group>"; };
+		83E4416A1FEA241900E6A592 /* RelationshipSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RelationshipSystem.hpp; sourceTree = "<group>"; };
+		83E4416D1FEBFAB900E6A592 /* DataContentText.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataContentText.cpp; sourceTree = "<group>"; };
+		83E4416E1FEBFAB900E6A592 /* DataContentText.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataContentText.hpp; sourceTree = "<group>"; };
+		83E441701FED5F7400E6A592 /* DataSearchSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataSearchSystem.cpp; sourceTree = "<group>"; };
+		83E441711FED5F7400E6A592 /* DataSearchSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataSearchSystem.hpp; sourceTree = "<group>"; };
 		A38D1D3F502D1AC9553878C1 /* Pods-Ramshackle-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ramshackle-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ramshackle-iOS/Pods-Ramshackle-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DC925988E75236FBC4CCD460 /* libPods-Ramshackle-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ramshackle-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -725,6 +737,8 @@
 			children = (
 				8326D1241FDEE91A0096BE80 /* ComputerGenerator.cpp */,
 				8326D1251FDEE91A0096BE80 /* ComputerGenerator.hpp */,
+				83E441701FED5F7400E6A592 /* DataSearchSystem.cpp */,
+				83E441711FED5F7400E6A592 /* DataSearchSystem.hpp */,
 			);
 			path = Computer;
 			sourceTree = "<group>";
@@ -748,6 +762,7 @@
 				8326D13B1FDEEFA00096BE80 /* OperatingSystem.hpp */,
 				8326D13D1FDF87400096BE80 /* Data.cpp */,
 				8326D13E1FDF87400096BE80 /* Data.hpp */,
+				83E4416C1FEBFAB100E6A592 /* Data */,
 			);
 			path = Computer;
 			sourceTree = "<group>";
@@ -977,6 +992,10 @@
 				8326D1231FDEE91A0096BE80 /* Computer */,
 				833364281FDFFC470034F912 /* PlayerSoftwareSystem.cpp */,
 				833364291FDFFC470034F912 /* PlayerSoftwareSystem.hpp */,
+				83E441661FE822D200E6A592 /* DataGenerator.cpp */,
+				83E441671FE822D200E6A592 /* DataGenerator.hpp */,
+				83E441691FEA241900E6A592 /* RelationshipSystem.cpp */,
+				83E4416A1FEA241900E6A592 /* RelationshipSystem.hpp */,
 			);
 			path = Systems;
 			sourceTree = "<group>";
@@ -988,6 +1007,15 @@
 				83ADC08A1FCB91DE00157E14 /* Relationship.hpp */,
 			);
 			path = Relationship;
+			sourceTree = "<group>";
+		};
+		83E4416C1FEBFAB100E6A592 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				83E4416D1FEBFAB900E6A592 /* DataContentText.cpp */,
+				83E4416E1FEBFAB900E6A592 /* DataContentText.hpp */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		B7E24664F2CC792E356892D7 /* Frameworks */ = {
@@ -1217,6 +1245,7 @@
 				837BB0A61EBFC8C800C372A9 /* ResearchOffice.cpp in Sources */,
 				8385796D1FBD438A00555CE5 /* Entity.cpp in Sources */,
 				83ADC08B1FCB91DE00157E14 /* Relationship.cpp in Sources */,
+				83E441681FE822D200E6A592 /* DataGenerator.cpp in Sources */,
 				83ADC09C1FCE057D00157E14 /* NameSystem.cpp in Sources */,
 				832510E71EBFEA0600AA1A2E /* Happiness.cpp in Sources */,
 				83ADC08E1FCBB08500157E14 /* Relational.cpp in Sources */,
@@ -1243,15 +1272,18 @@
 				837BB0C01EBFC8C800C372A9 /* UIComponentQuestion.cpp in Sources */,
 				832510E91EBFEA0600AA1A2E /* Researcher.cpp in Sources */,
 				832511221EBFEB4C00AA1A2E /* GoalIndependentThought.cpp in Sources */,
+				83E4416F1FEBFAB900E6A592 /* DataContentText.cpp in Sources */,
 				8326D0E11FD798A60096BE80 /* UIComponentMessageList_iOS.mm in Sources */,
 				8326D13C1FDEEFA00096BE80 /* OperatingSystem.cpp in Sources */,
 				837BB0EF1EBFD7B400C372A9 /* UIView+Helper.m in Sources */,
 				837BB0EC1EBFD7B400C372A9 /* UIComponentQuestion_iOS.mm in Sources */,
+				83E441721FED5F7400E6A592 /* DataSearchSystem.cpp in Sources */,
 				834B66FB1FCE465F00849F24 /* RandomSelection.cpp in Sources */,
 				8326D1351FDEE93C0096BE80 /* ComputerMemory.cpp in Sources */,
 				837BB0E91EBFD7B400C372A9 /* UIComponentMessage_iOS.mm in Sources */,
 				8325111E1EBFEB4C00AA1A2E /* GameEvent.cpp in Sources */,
 				833364301FE00CA00034F912 /* TTS_iOS.mm in Sources */,
+				83E4416B1FEA241900E6A592 /* RelationshipSystem.cpp in Sources */,
 				837BB0BF1EBFC8C800C372A9 /* UIComponentMessage.cpp in Sources */,
 				8325111F1EBFEB4C00AA1A2E /* GameEventStart.cpp in Sources */,
 				8326D0DE1FD796120096BE80 /* MessageList.mm in Sources */,

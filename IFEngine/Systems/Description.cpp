@@ -15,6 +15,7 @@
 #include "ConsciousBeing.hpp"
 #include "TextUtils.hpp"
 #include "Player.hpp"
+#include "Physical.hpp"
 
 NS_RAM_OPEN
 
@@ -42,9 +43,16 @@ void describe_consciousness(Entity *e) {
                 break;
         }
     } else {
-        message(p ?
-                you("are not conscious.") :
-                the(e, "is not conscious."));
+        Physical *body = e->getComponent<Physical>();
+        if (body) {
+            message(p ?
+                    you("are an inanimate object.") :
+                    the(e, "is an inanimate object."));
+        } else {
+            message(p ?
+                    you("are not conscious.") :
+                    the(e, "is not conscious."));
+        }
     }
 }
 

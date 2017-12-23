@@ -12,9 +12,10 @@
 
 NS_RAM_OPEN
 
-Relationship::Relationship(Entity *from, Entity *to,  std::string description)
+Relationship::Relationship(Entity *from, Entity *to, RelationshipType type, std::string description)
 : _fromEntityID(from->getObjectId())
 , _toEntityID(to->getObjectId())
+, _type(type)
 , _description(description)
 { }
 

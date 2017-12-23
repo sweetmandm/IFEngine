@@ -10,15 +10,16 @@
 #define Data_hpp
 
 #include "Component.hpp"
+#include <string>
 
 NS_RAM_OPEN
 
-enum DataType {
-    DataSoftware,
-    DataImage,
-    DataAudio,
-    DataText
-};
+typedef enum {
+    DataTypeSoftware,
+    DataTypeImage,
+    DataTypeAudio,
+    DataTypeText
+} DataType;
 
 class Data : public Component {
     
@@ -36,6 +37,8 @@ public:
     T getData() { return dynamic_cast<T>(_data); };
     
     BaseObject* getData() { return _data; };
+    
+    std::string textRepresentation();
 };
 
 NS_RAM_CLOSE

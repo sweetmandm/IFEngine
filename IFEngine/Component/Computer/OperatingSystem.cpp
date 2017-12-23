@@ -46,7 +46,7 @@ InstallationResult OperatingSystem::installSoftware(Software *software) {
     }
     
     auto disk = disks->diskWithFree(software->getDiskReq());
-    auto data = new Data(DataSoftware, software->getDiskReq(), software);
+    auto data = Data(DataTypeSoftware, software->getDiskReq(), software);
     if (!disk || !disk->addData(data)) {
         return InstallationFailureDisk;
     }

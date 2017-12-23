@@ -40,7 +40,6 @@ void PlayerSoftwareSystem::start(Entity *player) {
                 consciousness->setState(ConsciousBeingStateDead);
             }
         }
-        
     }
     describe_consciousness(player);
 }

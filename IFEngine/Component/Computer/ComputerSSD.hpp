@@ -20,7 +20,7 @@ class ComputerSSD {
     ComputerDiskInterface *_owner;
     int _size;
     int _used;
-    std::vector<Data*> _data;
+    std::vector<Data> _data;
 public:
     ComputerSSD(int sizeInMB);
     ComputerDiskInterface* getOwner() { return _owner; };
@@ -28,8 +28,9 @@ public:
     int getSize() { return _size; };
     int getFree() { return _size - _used; };
     int getUsed() { return _used; };
-    bool addData(Data *data);
+    bool addData(Data data);
     void removeDataObject(BaseObject *dataObject);
+    Data* randomDataItem();
 };
 
 NS_RAM_CLOSE

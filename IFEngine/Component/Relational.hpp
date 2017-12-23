@@ -24,6 +24,7 @@ public:
     void addRelationship(Relationship *relationship);
     void removeRelationship(Relationship *relationship);
     Relationship* getRelationshipTo(object_id objectId);
+    Relationship* getRelationshipTo(BaseObject *object);
 };
 
 NS_RAM_CLOSE

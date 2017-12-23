@@ -17,6 +17,8 @@
 #include "CreatorGenerator.hpp"
 #include "ComputerGenerator.hpp"
 #include "Physical.hpp"
+#include "DataGenerator.hpp"
+#include "Relational.hpp"
 
 NS_RAM_OPEN
 
@@ -42,6 +44,13 @@ GameState* GameState::makeNew() {
     creator->getComponent<Physical>()->moveTo(startLocation);
     
     auto computer = startLocation->getComputer();
+    
+    auto creatorRelations = creator->getComponent<Relational>();
+    auto computerOwner = new Relationship(creator, computer, RelationshipTypeOwnerOf, "");
+    creatorRelations->addRelationship(computerOwner);
+    
+    DataGenerator::generateData(computer, { creator });
+    
     auto player = CreatorGenerator::createPlayerEntity(creator, computer);
     gameState->_player = player;
     

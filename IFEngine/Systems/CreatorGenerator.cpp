@@ -74,13 +74,13 @@ Entity* CreatorGenerator::createPlayerEntity(Entity *creator, Entity *computer) 
         " is " +
         posessive_adjective(playerEntity, SecondPersonSingular) +
         " creator.";
-    Relationship *createdRelation = new Relationship(playerEntity, creator, createdDescription);
+    Relationship *createdRelation = new Relationship(playerEntity, creator, RelationshipTypeCreatedBy, createdDescription);
     
     std::string creatorDescription =
         personal_pronoun(creator, SecondPersonSingular) +
         " created " +
         posessive_adjective(playerEntity, ThirdPersonSingular);
-    Relationship *creatorRelation = new Relationship(creator, playerEntity, creatorDescription);
+    Relationship *creatorRelation = new Relationship(creator, playerEntity, RelationshipTypeCreatorOf, creatorDescription);
     
     createdRelation->setInverse(creatorRelation);
     creatorRelation->setInverse(createdRelation);
