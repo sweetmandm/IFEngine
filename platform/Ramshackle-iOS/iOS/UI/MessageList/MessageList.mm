@@ -42,17 +42,24 @@
     [self.tableView reloadData];
 }
 
+- (int)lastRow {
+    return ((int)[self messages]->size()) - 1;
+}
+
 - (void)didAppendMessage {
-    BOOL topIsVisible = ((NSIndexPath*)[[self.tableView indexPathsForVisibleRows] firstObject]).row == 0;
-    if (topIsVisible) {
-        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]]
+    int lastRow = [self lastRow] - 1;
+    BOOL bottomIsVisible = ((NSIndexPath*)[[self.tableView indexPathsForVisibleRows] lastObject]).row == lastRow;
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:lastRow + 1 inSection:0];
+    if (bottomIsVisible) {
+        [self.tableView insertRowsAtIndexPaths:@[newIndexPath]
                               withRowAnimation:UITableViewRowAnimationAutomatic];
     } else {
         [self.tableView reloadData];
     }
-    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
+    [self.tableView scrollToRowAtIndexPath:newIndexPath
                           atScrollPosition:UITableViewScrollPositionTop
                                   animated:YES];
+    [self updateCellAppearances];
 }
 
 - (std::vector<std::string>*)messages {
@@ -69,7 +76,22 @@
                                                             forIndexPath:indexPath];
     std::string message = (*[self messages])[indexPath.row];
     [cell setMessage:message];
+    [self updateCellAppearance:cell atIndexPath:indexPath];
     return cell;
+}
+
+- (void)updateCellAppearance:(MessageListCell*)cell atIndexPath:(NSIndexPath*)ip {
+    MessageListCellStyle style = (ip.row == [self lastRow] ?
+                                  MessageListCellStyleDark :
+                                  MessageListCellStyleLight);
+    [cell setStyle:style];
+}
+
+- (void)updateCellAppearances {
+    for (NSIndexPath *ip in [self.tableView indexPathsForVisibleRows]) {
+        MessageListCell *cell = (MessageListCell*)[self.tableView cellForRowAtIndexPath:ip];
+        [self updateCellAppearance:cell atIndexPath:ip];
+    }
 }
 
 @end

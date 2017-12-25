@@ -32,4 +32,15 @@
     [self.messageLabel setText:[NSString stringWithUTF8String:message.c_str()]];
 }
 
+- (void)setStyle:(MessageListCellStyle)style {
+    switch (style) {
+        case MessageListCellStyleLight:
+            [self.messageLabel setTextColor:[StylesiOS gray]];
+            break;
+        case MessageListCellStyleDark:
+            [self.messageLabel setTextColor:[StylesiOS dark]];
+            break;
+    }
+}
+
 @end

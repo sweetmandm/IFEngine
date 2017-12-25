@@ -11,7 +11,7 @@
 NS_RAM_OPEN
 
 void UIComponentMessageList::append(std::string message) {
-    _messages->insert(_messages->begin(), message);
+    _messages->push_back(message);
 }
 
 UIComponentMessageList::UIComponentMessageList()
